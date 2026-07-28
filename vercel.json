@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/style.css", "dest": "/style.css", "headers": { "content-type": "text/css" } },
+    { "src": "/app.js", "dest": "/app.js", "headers": { "content-type": "application/javascript" } },
+    { "src": "/admin", "dest": "/admin.html", "headers": { "content-type": "text/html" } },
+    { "src": "/privacy", "dest": "/privacy.html", "headers": { "content-type": "text/html" } },
+    { "src": "/terms", "dest": "/terms.html", "headers": { "content-type": "text/html" } },
+    { "src": "/(.*)", "dest": "/index.html", "headers": { "content-type": "text/html" } }
+  ]
+}
