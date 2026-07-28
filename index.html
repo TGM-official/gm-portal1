@@ -6,17 +6,14 @@
     <title>Granth Mitra - Educational Initiative of Akanksha Charitable Trust</title>
     <!-- Modern Tailwind CSS Compilation CDN Engine -->
     <script src="https://tailwindcss.com"></script>
-    <!-- FontAwesome for UI Icons -->
+    <!-- FontAwesome for NGO UI Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        @import url('https://googleapis.com');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glow-subtle { box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.15); }
-    </style>
+    <!-- Link to our clean separate styles configuration file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-    <!-- PRIMARY DUAL-BRANDED HEADER NAVIGATION -->
+    <!-- PRIMARY HEADER NAVIGATION -->
     <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-40 shadow-xs">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
@@ -37,7 +34,6 @@
                 <a href="#impact" class="hover:text-indigo-600 transition">Our Impact</a>
                 <a href="#events" class="hover:text-indigo-600 transition">Events</a>
                 <a href="#resources" class="hover:text-indigo-600 transition">Resources</a>
-                <a href="#footer" class="hover:text-indigo-600 transition">Contact</a>
             </nav>
 
             <div>
@@ -76,7 +72,6 @@
                         <h3 class="text-lg font-bold text-white tracking-wide">Weekly Saturday Mentoring</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">College student leaders deploying directly to village centers to optimize rural literacy outcomes.</p>
                     </div>
-                    
                     <div class="absolute top-4 left-4 bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider">Student Mentorship</div>
                     <div class="absolute top-16 right-4 bg-purple-500/20 text-purple-300 border border-purple-400/30 px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider">Community Learning</div>
                     <div class="absolute bottom-16 left-4 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider">Rural Education</div>
@@ -86,405 +81,127 @@
 
         </div>
     </section>
-    <!-- 📊 4. ANIMATED PERFORMANCE COUNTERS ROW (Impact Section) -->
+
+    <!-- 📊 DYNAMIC IMPACT COUNTERS ROW -->
     <section id="impact" class="max-w-7xl mx-auto px-6 -mt-12 relative z-20">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100/80 flex items-center space-x-4 glow-subtle">
-                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl shadow-inner"><i class="fa-solid fa-user-graduate"></i></div>
-                <div>
-                    <div id="display-statVolunteers" class="text-xl md:text-2xl font-black text-slate-900">150+</div>
-                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Active Volunteers</div>
-                </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4 glow-subtle">
+                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl shadow-inner">👥</div>
+                <div><div id="display-statVolunteers" class="text-xl md:text-2xl font-black text-slate-900">150+</div><div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active Volunteers</div></div>
             </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100/80 flex items-center space-x-4 glow-subtle">
-                <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl shadow-inner"><i class="fa-solid fa-building-columns"></i></div>
-                <div>
-                    <div id="display-statColleges" class="text-xl md:text-2xl font-black text-slate-900">35+</div>
-                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Partner Colleges</div>
-                </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4 glow-subtle">
+                <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl shadow-inner">🏢</div>
+                <div><div id="display-statColleges" class="text-xl md:text-2xl font-black text-slate-900">35+</div><div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Partner Colleges</div></div>
             </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100/80 flex items-center space-x-4 glow-subtle">
-                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl shadow-inner"><i class="fa-solid fa-school-flag"></i></div>
-                <div>
-                    <div id="display-statSchools" class="text-xl md:text-2xl font-black text-slate-900">50+</div>
-                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Government Schools</div>
-                </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4 glow-subtle">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl shadow-inner">🏫</div>
+                <div><div id="display-statSchools" class="text-xl md:text-2xl font-black text-slate-900">50+</div><div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Govt Schools</div></div>
             </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100/80 flex items-center space-x-4 glow-subtle">
-                <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl shadow-inner"><i class="fa-solid fa-children"></i></div>
-                <div>
-                    <div id="display-statPupils" class="text-xl md:text-2xl font-black text-slate-900">10,000+</div>
-                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Students Mentored</div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 📖 5. ABOUT GRANTH MITRA MISSION CONTEXT -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-md">Mission Parameters</span>
-            <h2 id="display-aboutTitle" class="text-3xl font-extrabold text-slate-900 tracking-tight md:text-4xl">Why the Programme was Started</h2>
-            <p id="display-aboutBody" class="text-slate-600 text-sm md:text-base leading-relaxed">
-                Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions, providing essential rural educational support and vibrant school engagement [dynamic-map].
-            </p>
-        </div>
-        <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-50 rounded-full opacity-50"></div>
-            <h3 class="text-xl font-bold text-slate-900 mb-4">Core Programme Objective</h3>
-            <p class="text-xs text-slate-500 leading-relaxed mb-4">
-                Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.
-            </p>
-            <div class="bg-indigo-900 text-white p-4 rounded-xl text-xs flex justify-between items-center">
-                <span>Governance Board: <strong>Akanksha Trust (ACT)</strong></span>
-                <i class="fa-solid fa-building-columns text-indigo-400"></i>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4 glow-subtle">
+                <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl shadow-inner">👶</div>
+                <div><div id="display-statPupils" class="text-xl md:text-2xl font-black text-slate-900">10,000+</div><div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Students Mentored</div></div>
             </div>
         </div>
     </section>
 
-    <!-- ⏳ 6. HOW THE PROGRAMME WORKS (6-Step Timeline) -->
-    <section class="bg-slate-900 text-white py-24 px-6">
+    <!-- ⏳ HOW THE PROGRAMME WORKS (6-Step Timeline) -->
+    <section id="about" class="bg-slate-900 text-white py-24 px-6 mt-16">
         <div class="max-w-7xl mx-auto space-y-12">
-            <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-purple-400 font-bold uppercase tracking-widest text-xs">Field Sequence</span>
-                <h2 class="text-3xl font-extrabold tracking-tight md:text-4xl">The Structural Six-Step Engagement Track</h2>
-            </div>
+            <div class="text-center max-w-2xl mx-auto"><h2 class="text-3xl font-extrabold tracking-tight md:text-4xl">The Structural Six-Step Engagement Track</h2></div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
-                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 01</div>
-                    <h4 class="font-bold text-sm text-white">College Students Register</h4>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700"><div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 01</div><h4 class="font-bold text-sm text-white">Students Register</h4><p class="text-[11px] text-slate-400 mt-1">College leaders sign up tracking files.</p></div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700"><div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 02</div><h4 class="font-bold text-sm text-white">Orientation</h4><p class="text-[11px] text-slate-400 mt-1">Volunteers undergo validation by ACT.</p></div>
+<div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 03</div>
+                    <h4 class="font-bold text-sm text-white">Allocation</h4>
+                    <p class="text-[11px] text-slate-400 mt-1">Mapped to regional village govt schools.</p>
                 </div>
-                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 02</div>
-                    <h4 class="font-bold text-sm text-white">Volunteer Orientation</h4>
-                </div>
-                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 03</div>
-                    <h4 class="font-bold text-sm text-white">Library Allocation</h4>
-                </div>
+
+                <!-- Step 04 Card -->
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
                     <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 04</div>
-                    <h4 class="font-bold text-sm text-white">Weekly Mentoring</h4>
+                    <h4 class="font-bold text-sm text-white">Mentoring</h4>
+                    <p class="text-[11px] text-slate-400 mt-1">Weekly Saturday interaction tracks.</p>
                 </div>
+
+                <!-- Step 05 Card -->
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
                     <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 05</div>
-                    <h4 class="font-bold text-sm text-white">Activity Reporting</h4>
+                    <h4 class="font-bold text-sm text-white">Reporting</h4>
+                    <p class="text-[11px] text-slate-400 mt-1">Activity logs sent to tracking web apps.</p>
                 </div>
+
+                <!-- Step 06 Card -->
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
                     <div class="text-purple-400 font-mono text-xs font-bold mb-2">Step 06</div>
                     <h4 class="font-bold text-sm text-white">Impact Matrix</h4>
+                    <p class="text-[11px] text-slate-400 mt-1">Volunteers secure credit validation tracking logs.</p>
                 </div>
-          </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- 🎴 7. PROGRAMME AREAS GRID BLOCK -->
+    <!-- 🎴 ATTRACTIVE PROGRAMME AREAS -->
     <section id="areas" class="max-w-7xl mx-auto px-6 py-24">
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
             <span class="text-indigo-600 font-bold uppercase tracking-widest text-xs">Curriculum Focus</span>
             <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight md:text-4xl">Attractive Programme Areas</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between">
-                <div class="space-y-2">
-                    <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-book-open"></i></div>
-                    <h3 class="font-bold text-base text-slate-900">Reading & Library Activities</h3>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between">
-                <div class="space-y-2">
-                    <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-flask"></i></div>
-                    <h3 class="font-bold text-base text-slate-900">Science Experiments</h3>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between">
-                <div class="space-y-2">
-                    <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-calculator"></i></div>
-                    <h3 class="font-bold text-base text-slate-900">Mathematics Support</h3>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between">
-                <div class="space-y-2">
-                    <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-comments"></i></div>
-                    <h3 class="font-bold text-base text-slate-900">English Communication</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- 📢 8. ANNOUNCEMENTS, RESOURCES & MAP FOOTER -->
-    <section id="events" class="bg-slate-100 py-16 px-6 border-t border-b border-slate-200/60">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
-            <div class="lg:col-span-4 space-y-6">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-purple-700 bg-purple-100 px-3 py-1 rounded-md">Notice Board</span>
-                    <h3 id="display-noticeTitle" class="text-2xl font-extrabold text-slate-900 tracking-tight mt-2">Events & Announcements</h3>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 text-xs">
-                        <div class="text-[10px] font-bold text-indigo-600 mb-1">AUGUST 12, 2026</div>
-                        <h4 class="font-bold text-slate-900">Volunteer Orientation Framework</h4>
-                        <p class="text-slate-500 mt-1 leading-normal">Mandatory cluster orientation details review at ACT Head office point.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="gallery" class="lg:col-span-8 space-y-6">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-indigo-700 bg-indigo-100 px-3 py-1 rounded-md">Field Visuals</span>
-                    <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight mt-2">Active Field Operations Gallery</h3>
-                </div>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="aspect-square bg-slate-800 rounded-2xl flex flex-col justify-end p-4 relative overflow-hidden"><span class="text-[10px] font-bold text-white relative z-10 uppercase tracking-wider">Library Sessions</span></div>
-                    <div class="aspect-square bg-slate-800 rounded-2xl flex flex-col justify-end p-4 relative overflow-hidden"><span class="text-[10px] font-bold text-white relative z-10 uppercase tracking-wider">Science Activities</span></div>
-                    <div class="aspect-square bg-slate-800 rounded-2xl flex flex-col justify-end p-4 relative overflow-hidden"><span class="text-[10px] font-bold text-white relative z-10 uppercase tracking-wider">Reading Circles</span></div>
-                </div>
-            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between"><div class="space-y-3"><div class="text-2xl">📚</div><h3 class="font-bold text-base text-slate-900">Reading & Library Activities</h3></div></div>
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between"><div class="space-y-3"><div class="text-2xl">🧪</div><h3 class="font-bold text-base text-slate-900">Science Experiments</h3></div></div>
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between"><div class="space-y-3"><div class="text-2xl">📐</div><h3 class="font-bold text-base text-slate-900">Mathematics Support</h3></div></div>
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/60 flex flex-col justify-between"><div class="space-y-3"><div class="text-2xl">🗣️</div><h3 class="font-bold text-base text-slate-900">English Communication</h3></div></div>
         </div>
     </section>
 
-    <!-- 📥 RESOURCES MODULE -->
-    <section id="resources" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-md">Training Assets</span>
-            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Downloadable Program Resources</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between text-xs">
-                <div class="flex items-center space-x-3">
-                    <div class="text-2xl text-rose-600"><i class="fa-solid fa-file-pdf"></i></div>
-                    <div><h4 class="font-bold text-slate-900">Volunteer Handbook</h4><div class="text-[10px] text-slate-400">PDF Document · 2.4 MB</div></div>
-                </div>
-                <button class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-circle-down text-lg"></i></button>
+    <!-- 📢 EVENTS FEED TERMINAL -->
+    <section id="events" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col md:flex-row justify-between gap-6 items-start shadow-xs">
+            <div class="space-y-2 max-w-xl">
+                <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase rounded">Campus Unit Feed</span>
+                <h3 class="text-lg font-bold text-slate-900">Upcoming Operational & Briefing Calendars</h3>
+                <p class="text-xs text-slate-600">ACT Central Coordinators use this container block to issue direct training instructions and deployment notices.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between text-xs">
-                <div class="flex items-center space-x-3">
-                    <div class="text-2xl text-rose-600"><i class="fa-solid fa-file-pdf"></i></div>
-                    <div><h4 class="font-bold text-slate-900">Activity Manual Guides</h4><div class="text-[10px] text-slate-400">PDF Document · 4.1 MB</div></div>
-                </div>
-                <button class="text-indigo-600 hover:text-indigo-800"><i class="fa-solid fa-circle-down text-lg"></i></button>
+            <div class="w-full md:w-72 bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-3">
+                <div class="border-l-4 border-indigo-600 pl-2"><div class="text-[10px] font-bold text-gray-400">JULY 25, 2026</div><div class="font-semibold text-slate-800">Mandatory Mentor Briefing</div></div>
             </div>
         </div>
     </section>
 
     <!-- 🗺️ INSTITUTIONAL MAP FOOTER -->
-    <footer id="footer" class="bg-slate-950 text-slate-400 text-xs pt-16 pb-8 border-t border-slate-900 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-            <div class="space-y-4">
-                <h4 class="text-white font-bold text-sm">🏢 Granth Mitra Programme</h4>
-                <p id="display-footerBlurb" class="text-slate-400 leading-relaxed text-[11px]">Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust (ACT) dedicated to empowering rural school students [dynamic-map].</p>
-            </div>
-            <div class="space-y-2">
-                <h4 class="text-white font-bold text-xs uppercase tracking-wider">Contact Details Desk</h4>
-                <p id="display-footerContact" class="leading-relaxed text-[11px]">Desk Help: +91 98765 43210<br>Email: desk@akankshatrust.org</p>
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-white font-bold text-xs uppercase tracking-wider">Headquarters & Location</h4>
-                <p id="display-footerAddress" class="leading-relaxed text-[11px] mb-1">Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076</p>
-                <div class="w-full h-28 rounded-lg overflow-hidden border border-slate-800"><iframe src="https://google.com" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe></div>
+    <footer id="footer" class="bg-slate-950 text-slate-400 text-xs pt-12 pb-6 border-t border-slate-900 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            <div class="space-y-3"><h4 class="text-white font-bold text-sm">🏢 Granth Mitra</h4><p class="text-slate-400 leading-relaxed text-[11px]">Educational volunteer program managed by Akanksha Charitable Trust (ACT) [dynamic-map].</p></div>
+            <div class="space-y-2"><h4 class="text-white font-bold text-xs uppercase tracking-wider">Contact Desk (ACT)</h4><p class="leading-relaxed text-[11px]">Desk Help: +91 98765 43210</p></div>
+            <div class="space-y-3 lg:col-span-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider">Headquarters Address</h4>
+                <p class="leading-relaxed text-[11px] mb-2">#21, Ground Floor, MCHS Colony, BTM Layout 2nd Stage, Bangalore, Karnataka - 560076</p>
+                <div class="w-full h-28 rounded-lg overflow-hidden border border-slate-800">
+                    <iframe src="https://google.com" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-900 text-center text-[10px] text-slate-600">Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.</div>
     </footer>
 
-    <!-- 🔐 PORTAL ROUTING POPUP MODAL -->
-    <div id="authPopup" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl relative border border-slate-100 p-8 space-y-6">
+    <!-- DUAL AUTH MODAL POPUP -->
+    <div id="authPopup" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl relative p-8 space-y-6">
             <button onclick="toggleAuthPopup(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold">✕</button>
-            <div class="text-center"><h3 class="text-2xl font-extrabold text-slate-900">Select Designated Gateway Node</h3></div>
             <div class="grid md:grid-cols-2 gap-4">
                 <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl flex flex-col justify-between space-y-4">
-                    <div class="space-y-2">
-                        <div class="text-purple-600 text-xl"><i class="fa-solid fa-sliders"></i> <strong class="text-sm font-bold text-slate-900 ml-1">ACT Admin Login</strong></div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Manage public website, events, announcements, gallery content, and statistics.</p>
-                    </div>
-                    <button onclick="loadSeparateAdminDashboard()" class="w-full bg-purple-600 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-purple-700 transition">Login as ACT Admin</button>
+                    <div><h4 class="font-bold text-slate-900 text-sm">ACT Admin Login</h4><p class="text-[11px] text-slate-500 mt-1">Manage public website statistics and layouts.</p></div>
+                    <button onclick="loadSeparateAdminDashboard()" class="w-full bg-purple-600 text-white text-xs font-bold py-2.5 rounded-xl">Login as ACT Admin</button>
                 </div>
                 <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl flex flex-col justify-between space-y-4">
-                    <div class="space-y-2">
-                        <div class="text-indigo-600 text-xl"><i class="fa-solid fa-graduation-cap"></i> <strong class="text-sm font-bold text-slate-900 ml-1">GM Volunteer Login</strong></div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Access volunteer dashboard to submit attendance, log reports, and track credit validation hours.</p>
-                    </div>
-                    <button onclick="executeVolunteerRedirect()" class="w-full bg-indigo-600 text-white text-xs font-bold py-2.5 rounded-xl hover:bg-indigo-700 transition">Login as Volunteer</button>
+                    <div><h4 class="font-bold text-slate-900 text-sm">GM Volunteer Login</h4><p class="text-[11px] text-slate-500 mt-1">Submit reports and track NSS validation hours.</p></div>
+                    <button onclick="executeVolunteerRedirect()" class="w-full bg-indigo-600 text-white text-xs font-bold py-2.5 rounded-xl">Login as Volunteer</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 🛠️ SEPARATE ISOLATED ADMINISTRATIVE MANAGEMENT PANEL VIEW (Hidden Layer) -->
-    <div id="privateAdminDashboard" class="fixed inset-0 bg-slate-100 z-50 hidden flex flex-col">
-        <!-- Top Workspace Bar -->
-        <div class="bg-slate-900 text-white px-6 py-4 flex justify-between items-center shadow-md">
-            <div class="flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 bg-purple-500 rounded-full animate-ping"></span>
-                <span class="text-sm font-bold tracking-tight">Granth Mitra Public Website Management Panel</span>
-            </div>
-            <button onclick="closeAdminDashboard()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-4 py-2 rounded-lg font-bold transition">Log Out Dashboard</button>
-        </div>
-
-        <div class="flex flex-1 overflow-hidden">
-            <!-- Left Navigation Sidebar -->
-            <aside class="w-64 bg-slate-950 text-slate-400 p-6 flex flex-col justify-between border-r border-slate-800">
-                <div class="space-y-6">
-                    <div class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Website Branding Modules</div>
-                    <nav class="flex flex-col space-y-2 text-xs font-bold">
-                        <button class="w-full text-left py-2 px-3 bg-purple-900/40 text-purple-400 rounded-lg flex items-center gap-2"><i class="fa-solid fa-chart-line"></i> Homepage Statistics</button>
-                        <button onclick="switchTab('announcements')" class="w-full text-left py-2 px-3 hover:text-white rounded-lg flex items-center gap-2"><i class="fa-solid fa-bullhorn"></i> Notice & Announcements</button>
-                        <button onclick="switchTab('about')" class="w-full text-left py-2 px-3 hover:text-white rounded-lg flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> About Programme</button>
-                        <button onclick="switchTab('gallery')" class="w-full text-left py-2 px-3 hover:text-white rounded-lg flex items-center gap-2"><i class="fa-solid fa-images"></i> Events Gallery</button>
-                        <button onclick="switchTab('resources')" class="w-full text-left py-2 px-3 hover:text-white rounded-lg flex items-center gap-2"><i class="fa-solid fa-folder-open"></i> Resources</button>
-                        <button onclick="switchTab('contact')" class="w-full text-left py-2 px-3 hover:text-white rounded-lg flex items-center gap-2"><i class="fa-solid fa-address-book"></i> Contact Details</button>
-                    </nav>
-                </div>
-                <div class="text-[10px] text-slate-600 text-center">Akanksha Trust Core Oversight Engine</div>
-            </aside>
-
-            <!-- Center Form Workspace with Rich Options -->
-            <main class="flex-1 p-8 overflow-y-auto space-y-6">
-                <!-- Statistics Module Form Card -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                        <div class="flex items-center gap-2">
-                            <span class="p-1.5 bg-purple-50 text-purple-600 rounded-lg text-xs"><i class="fa-solid fa-pen-to-square"></i></span>
-                            <h4 class="font-bold text-slate-900 text-sm">Module: Homepage Impact Statistics Counters</h4>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <button onclick="alert('Draft status preserved locally.')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg transition">Save Draft</button>
-                            <button onclick="alert('Launching staging canvas template preview layout.')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg transition">Preview</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Rich Text Input Fields Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Active Volunteers</label>
-                            <input id="inputVolunteers" type="text" value="150+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Partner Colleges</label>
-                            <input id="inputColleges" type="text" value="35+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Government Schools</label>
-                            <input id="inputSchools" type="text" value="50+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Students Mentored</label>
-                            <input id="inputPupils" type="text" value="10,000+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rich Media Management / Image Upload Simulation Module -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                        <div class="flex items-center gap-2">
-                            <span class="p-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs"><i class="fa-solid fa-images"></i></span>
-                            <h4 class="font-bold text-slate-900 text-sm">Module: Image Upload & Gallery Archive</h4>
-                        </div>
-                    </div>
-                    <div class="border-2 border-dashed border-slate-200 rounded-2xl p-8 text-center bg-slate-50/50 hover:bg-slate-50 transition cursor-pointer" onclick="simulateCmsImageUpload()">
-                        <div class="text-3xl text-slate-400 mb-2"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-                        <span class="text-xs font-semibold text-slate-700 block">Drag & drop your field campaign images here</span>
-                        <span class="text-[10px] text-slate-400 mt-1 block">Supports high-fidelity JPG, PNG format parameters</span>
-                    </div>
-                </div>
-
-                <!-- Content Publish Panel -->
-                <div class="pt-3 flex justify-end">
-                    <button onclick="commitDashboardChanges()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-bold px-6 py-3 rounded-xl shadow-md transition transform hover:-translate-y-0.5"><i class="fa-solid fa-paper-plane mr-1.5"></i> Publish Live Content</button>
-                </div>
-            </main>
-        </div>
-    </div>
-
-      <!-- ⚙️ COMPONENT RUNTIME SCRIPT LOGIC (WITH ADMIN AUTHENTICATION SECURITY) -->
-    <script>
-        // Dropdown Visibility Handler
-        function toggleDropdown() {
-            const dropdown = document.getElementById('loginDropdown');
-            if (dropdown) dropdown.classList.toggle('hidden');
-        }
-
-        // Popup Window Toggles
-        function toggleAuthPopup(show) {
-            const popup = document.getElementById('authPopup');
-            if (popup) popup.classList.toggle('hidden', !show);
-        }
-
-        // Close dropdown when clicking outside components
-        window.addEventListener('click', function(e) {
-            if (!e.target.closest('.relative')) {
-                const dropdown = document.getElementById('loginDropdown');
-                if (dropdown) dropdown.classList.add('hidden');
-            }
-        });
-
-        function executeVolunteerRedirect() {
-            toggleAuthPopup(false);
-            alert("➔ Redirecting Session: Safely exiting the public-facing application workspace to authenticate your individual credentials on the separate Google Apps Script `/volunteer-dashboard` framework web app.");
-            window.open("https://google.com", "_blank");
-        }
-
-        // 🔒 SECURE CRYPTOGRAPHIC WORKSPACE AUTHORIZATION NODE
-        function loadSeparateAdminDashboard() {
-            // Prompt administrative personnel for their access key
-            const inputKey = prompt("🔒 Enter ACT Admin Security Authorization Passkey:");
-            
-            if (!inputKey) {
-                return; // User clicked cancel
-            }
-
-            // Client-side lightweight security verification protocol
-            // Match token verification targets or local validation keys safely
-            if (inputKey === "actAdmin2026") {
-                toggleAuthPopup(false);
-                const dashboard = document.getElementById('privateAdminDashboard');
-                if (dashboard) {
-                    dashboard.classList.remove('hidden');
-                    alert("🔑 Access Authorization Granted: Welcome back, Akanksha Charitable Trust (ACT) System Admin. Separate website configuration tool room is loaded.");
-                }
-            } else {
-                alert("❌ Access Authorization Denied: Invalid cryptographic token. Only verified Akanksha Charitable Trust executive credentials pass this node protocol.");
-            }
-        }
-
-        function closeAdminDashboard() {
-            const dashboard = document.getElementById('privateAdminDashboard');
-            if (dashboard) dashboard.classList.add('hidden');
-        }
-
-        function simulateCmsImageUpload() {
-            alert("📷 Asset Manager: Simulating file system sync. Select field campaign imagery (Youth mentoring sessions, rural classrooms, or library circles) to write safely onto the server storage.");
-        }
-
-        function switchTab(tabName) {
-            alert("📂 Workspace Tab Switch: Loading form configuration schemas for the '" + tabName + "' editorial module.");
-        }
-
-        function commitDashboardChanges() {
-            // Validate nodes, read inputs and write smoothly onto public landing page elements
-            const valVolunteers = document.getElementById('inputVolunteers')?.value || "150+";
-            const valColleges = document.getElementById('inputColleges')?.value || "35+";
-            const valSchools = document.getElementById('inputSchools')?.value || "50+";
-            const valPupils = document.getElementById('inputPupils')?.value || "10,000+";
-
-            const elVolunteers = document.getElementById('display-statVolunteers');
-            const elColleges = document.getElementById('display-statColleges');
-            const elSchools = document.getElementById('display-statSchools');
-            const elPupils = document.getElementById('display-statPupils');
-
-            if (elVolunteers) elVolunteers.innerText = valVolunteers;
-            if (elColleges) elColleges.innerText = valColleges;
-            if (elSchools) elSchools.innerText = valSchools;
-            if (elPupils) elPupils.innerText = valPupils;
-            
-            closeAdminDashboard();
-            alert("💾 Website Content Published: Statistics modules and rich media parameters have been systematically written onto the live landing page configuration server files. Changes are instantly live for public visitors with no software system edit markers visible.");
-        }
-    </script>
+    <!-- External Script Integration Link -->
+    <script src="app.js"></script>
 </body>
 </html>
