@@ -3,393 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Granth Mitra - Educational Initiative of Akanksha Charitable Trust</title>
+    <title>Granth Mitra - Educational Initiative of Akanksha Charitable Trust (ACT)</title>
+    <!-- Stable Production Tailwind CSS Framework Link -->
+    <link href="https://cloudflare.com" rel="stylesheet">
+    <!-- FontAwesome for Premium NGO UI Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        @import url('https://googleapis.com');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 0; }
+        .glow-subtle { box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.12); }
+        .brush-ring-container { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+        .brush-svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-5deg); pointer-events: none; }
+        .floating-badge { position: absolute; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border: 1px solid #f1f5f9; padding: 12px 18px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08); display: flex; align-items: center; gap: 10px; animation: float-slow 4s ease-in-out infinite; z-index: 20; }
+        @keyframes float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .testimonial-slider { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .admin-panel-layer { position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; }
+    </style>
 </head>
-<body style="background-color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; color: #1e293b;">
+<body class="antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-    <!-- DUAL-BRANDED HEADER NAVIGATION BAR -->
-    <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 40;">
-        <div style="max-w: 1200px; margin: 0 auto; padding: 0 24px; height: 96px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 12px;">
-                <div style="width: 48px; height: 44px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);">
-                    <img src="logo.png" alt="ACT" style="width: 100%; height: 100%; object-fit: contain; font-size: 10px; color: #ffffff; text-align: center; line-height: 44px;" onerror="this.style.display='none'; this.parentNode.innerHTML='📚';"/>
+    <!-- 🏢 DUAL-BRANDED HEADER NAVIGATION BAR -->
+    <header class="bg-white border-b border-slate-200/80 sticky top-0 z-40 shadow-xs" style="background-color: rgba(255,255,255,0.96);">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            
+            <div class="flex items-center space-x-3.5">
+                <!-- Dynamic Replaceable Footer/Header Brand Logo Image Tag Slot -->
+                <div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl overflow-hidden shadow-md shadow-indigo-100">
+                    <img id="display-brandLogoNav" src="logo.png" alt="ACT" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentNode.innerHTML='📚';"/>
                 </div>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">GRANTH MITRA | ಗ್ರಂಥಮಿತ್ರ</span>
-                    <span style="font-size: 9px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;">Initiative of Akanksha Charitable Trust</span>
+                <div class="flex flex-col">
+                    <span class="text-base font-extrabold text-slate-900 tracking-tight leading-none">GRANTH MITRA | ಗ್ರಂಥಮಿತ್ರ</span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none mt-1.5">Initiative of Akanksha Charitable Trust</span>
                 </div>
             </div>
+
+            <!-- Central Section Navigation Router Links -->
+            <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase tracking-wider font-bold text-slate-600">
+                <a href="#" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Home</a>
+                <a href="#about" class="hover:text-indigo-600 transition">About Programme</a>
+                <a href="#areas" class="hover:text-indigo-600 transition">Syllabus Areas</a>
+                <a href="#impact" class="hover:text-indigo-600 transition">Our Impact</a>
+                <a href="#events" class="hover:text-indigo-600 transition">Events Feed</a>
+                <a href="#resources" class="hover:text-indigo-600 transition">Resources</a>
+            </nav>
+
+            <!-- Far Right Gateway Modal Popup Launcher -->
             <div>
-                <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff !important; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2); cursor: pointer; min-width: 150px; text-align: center;">
-                    PORTAL LOGIN
+                <button onclick="toggleAuthPopup(true)" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full shadow-md shadow-indigo-100 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-user text-sm"></i> <span>Portal Login</span>
                 </button>
             </div>
+
         </div>
     </header>
-
-    <!-- HERO HUB SECTION BANNER -->
-    <section style="background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #ffffff; padding: 80px 24px; overflow: hidden; text-align: left;">
-        <div style="max-w: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;">
-            <div style="display: flex; flex-direction: column; gap: 24px;">
-                <div style="align-self: flex-start; background-color: rgba(99, 102, 241, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); padding: 6px 16px; border-radius: 9999px; color: #818cf8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
-                    ✨ Akanksha Charitable Trust Flagship Initiative
-                </div>
-                <h1 style="font-size: 40px; font-weight: 800; margin: 0; color: #ffffff; line-height: 1.15;">
-                    Empowering Rural Education<br/> Through Youth Mentorship
-                </h1>
-                <p style="font-size: 15px; color: #cbd5e1; line-height: 1.6; margin: 0; max-w: 600px;">
-                    Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust where college students dedicate their time to mentoring rural government school students through weekly learning sessions, reading activities, life skills, and community engagement to build a stronger society.
-                </p>
-                <div style="display: flex; flex-direction: row; gap: 16px; margin-top: 8px; flex-wrap: wrap;">
-                    <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 16px 32px; border: none; border-radius: 12px; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); cursor: pointer;">
-                        Become a Volunteer
-                    </button>
-                    <button onclick="document.getElementById('areas').scrollIntoView({behavior: 'smooth'})" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 16px 32px; border-radius: 12px; cursor: pointer;">
-                        Explore the Programme
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 📊 DYNAMIC PERFORMANCE COUNTERS ROW (Impact Section) -->
-    <section style="max-w: 1200px; margin: -40px auto 0 auto; padding: 0 24px; position: relative; z-index: 20;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">👥</div>
-                <div>
-                    <div id="statVolunteers" style="font-size: 22px; font-weight: 800; color: #0f172a;">150+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Active Volunteers</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">🏢</div>
-                <div>
-                    <div id="statColleges" style="font-size: 22px; font-weight: 800; color: #0f172a;">35+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Partner Colleges</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">🏫</div>
-                <div>
-                    <div id="statSchools" style="font-size: 22px; font-weight: 800; color: #0f172a;">50+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Government Schools</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">📚</div>
-                <div>
-                    <div id="statLibraries" style="font-size: 22px; font-weight: 800; color: #0f172a;">35 Active</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Public Libraries</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">👶</div>
-                <div>
-                    <div id="statPupils" style="font-size: 22px; font-weight: 800; color: #0f172a;">10,000+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Students Mentored</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">🗺️</div>
-                <div>
-                    <div id="statDistricts" style="font-size: 22px; font-weight: 800; color: #0f172a;">12</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Districts Covered</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">⏱️</div>
-                <div>
-                    <div id="statHours" style="font-size: 22px; font-weight: 800; color: #0f172a;">25,000+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Volunteer Hours</div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
-                <div style="font-size: 20px;">👨‍🏫</div>
-                <div>
-                    <div id="statSessions" style="font-size: 22px; font-weight: 800; color: #0f172a;">1,800+</div>
-                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Learning Sessions</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 📖 5. ABOUT GRANTH MITRA MISSION CONTEXT SECTION -->
-    <!-- 📖 5. ABOUT GRANTH MITRA MISSION CONTEXT SECTION -->
-    <section style="max-w: 1200px; margin: 64px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: center;">
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-            <span style="align-self: flex-start; background-color: #eff6ff; padding: 4px 12px; border-radius: 6px; color: #2563eb; font-size: 11px; font-weight: 700; text-transform: uppercase;">Mission Parameters</span>
-            <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin: 0; line-height: 1.2;">Why the Programme was Started</h2>
-            <p id="display-aboutText" style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.</p>
-        </div>
-        <div style="background-color: #ffffff; padding: 32px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.02); position: relative; overflow: hidden;">
-            <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0;">Core Programme Objective</h3>
-            <p style="font-size: 13px; color: #64748b; line-height: 1.6; margin: 12px 0 0 0;">Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.</p>
-        </div>
-    </section>
-
-    <!-- ⏳ 6. HOW THE PROGRAMME WORKS (6-Step Timeline) -->
-    <section style="background-color: #0f172a; color: #ffffff; padding: 64px 24px;">
-        <div style="max-w: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
-            <div style="text-align: center; max-w: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px;">
-                <span style="color: #c084fc; font-weight: 700; text-transform: uppercase; font-size: 11px;">Field Sequence</span>
-                <h2 style="font-size: 28px; font-weight: 800; margin: 0;">The Structural Six-Step Engagement Track</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 01</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">College Students Register</h4></div>
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 02</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">Volunteer Orientation</h4></div>
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 03</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">Library Allocation</h4></div>
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 04</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">Weekly Mentoring</h4></div>
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 05</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">Activity Reporting</h4></div>
-                <div style="background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;"><div style="color: #c084fc; font-weight: 700; font-size: 11px; margin-bottom: 8px;">Step 06</div><h4 style="font-size: 14px; font-weight: 700; margin: 0;">Impact Matrix</h4></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🎴 7. PROGRAMME AREAS GRID BLOCK -->
-    <section id="areas" style="max-w: 1200px; margin: 64px auto; padding: 0 24px;">
-        <div style="text-align: center; max-w: 600px; margin: 0 auto 48px auto; display: flex; flex-direction: column; gap: 8px;">
-            <span style="color: #4f46e5; font-weight: 700; text-transform: uppercase; font-size: 11px;">Curriculum Focus</span>
-            <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin: 0;">Attractive Programme Areas</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 24px;">📚</div><h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Reading & Library Activities</h3></div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 24px;">🧪</div><h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Science Experiments</h3></div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 24px;">📐</div><h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Mathematics Support</h3></div>
-            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 24px;">🗣️</div><h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">English Communication</h3></div>
-        </div>
-    </section>
-
-    <!-- 📢 8. ANNOUNCEMENTS, RESOURCES & MAP FOOTER -->
-    <section id="events" style="background-color: #f1f5f9; padding: 64px 24px; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-        <div style="max-w: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px;">
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-                <div>
-                    <span style="color: #7c3aed; background-color: #f3e8ff; font-weight: 700; text-transform: uppercase; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Notice Board</span>
-                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0;">Events & Announcements</h3>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <div style="background-color: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; font-size: 12px;">
-                        <div id="display-noticeDate" style="font-weight: 700; color: #4f46e5; margin-bottom: 4px;">AUGUST 12, 2026</div>
-                        <h4 id="display-noticeHeader" style="font-weight: 700; color: #0f172a; margin: 0;">Volunteer Orientation Framework</h4>
-                        <p id="display-noticeDesc" style="color: #64748b; margin: 4px 0 0 0; line-height: 1.5;">Mandatory cluster orientation details review at ACT Head office point.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="gallery" style="display: flex; flex-direction: column; gap: 16px;">
-                <div>
-                    <span style="color: #2563eb; background-color: #eff6ff; font-weight: 700; text-transform: uppercase; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Field Visuals</span>
-                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0;">Active Field Operations Gallery</h3>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
-                    <div style="aspect-ratio: 1; background-color: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center;"><span style="font-size: 11px; font-weight: 700; color: #ffffff; text-transform: uppercase;">Library Sessions</span></div>
-                    <div style="aspect-ratio: 1; background-color: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center;"><span style="font-size: 11px; font-weight: 700; color: #ffffff; text-transform: uppercase;">Science Activities</span></div>
-                    <div style="aspect-ratio: 1; background-color: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center;"><span style="font-size: 11px; font-weight: 700; color: #ffffff; text-transform: uppercase;">Reading Circles</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 📥 RESOURCES MODULE -->
-    <section id="resources" style="max-w: 1200px; margin: 64px auto; padding: 0 24px;">
-        <div style="text-align: center; max-w: 600px; margin: 0 auto 32px auto; display: flex; flex-direction: column; gap: 8px;">
-            <span style="color: #4f46e5; font-weight: 700; text-transform: uppercase; font-size: 11px;">Training Assets</span>
-            <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin: 0;">Downloadable Program Resources</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; max-w: 900px; margin: 0 auto;">
-            <div style="background-color: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;">
-                <div style="display: flex; flex-direction: row; align-items: center; gap: 12px;">
-                    <span style="font-size: 24px; color: #dc2626;">📄</span>
-                    <div><h4 style="font-weight: 700; color: #0f172a; margin: 0;">Volunteer Handbook</h4><div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">PDF Document · 2.4 MB</div></div>
-                </div>
-            </div>
-            <div style="background-color: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;">
-                <div style="display: flex; flex-direction: row; align-items: center; gap: 12px;">
-                    <span style="font-size: 24px; color: #dc2626;">📄</span>
-                    <div><h4 style="font-weight: 700; color: #0f172a; margin: 0;">Activity Manual Guides</h4><div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">PDF Document · 4.1 MB</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🗺️ INSTITUTIONAL MAP FOOTER -->
-    <footer id="footer" style="background-color: #020617; text-align: left; color: #94a3b8; font-size: 12px; padding: 64px 24px 32px 24px; border-top: 1px solid #0f172a;">
-        <div style="max-w: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-bottom: 48px;">
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-                <h4 style="font-weight: 700; font-size: 14px; margin: 0; color: #ffffff;">🏢 Granth Mitra Programme</h4>
-                <p style="color: #94a3b8; margin: 0; line-height: 1.6; font-size: 12px;">Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust (ACT) dedicated to empowering rural school students [dynamic-map].</p>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <h4 style="font-weight: 700; font-size: 12px; text-transform: uppercase; margin: 0; color: #ffffff;">Contact Details Desk</h4>
-                <p id="display-footerContact" style="color: #94a3b8; margin: 0; line-height: 1.6;">Desk Help: +91 98765 43210<br>Email: desk@akankshatrust.org</p>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 12px; grid-column: span min(2, auto);">
-                <h4 style="font-weight: 700; font-size: 12px; text-transform: uppercase; margin: 0; color: #ffffff;">Headquarters Address & Location</h4>
-                <p style="color: #94a3b8; margin: 0; line-height: 1.6; margin-bottom: 8px;">Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076</p>
-                <div style="width: 100%; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid #1e293b;">
-                    <iframe src="https://google.com" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-        <div style="max-w: 1200px; margin: 0 auto; padding-top: 32px; border-top: 1px solid #1e293b; text-align: center; font-size: 11px; color: #475569;">Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.</div>
-    </footer>
-
-    <!-- DUAL AUTH MODAL POPUP -->
-    <div id="authPopup" style="position: fixed; inset: 0; background-color: rgba(2, 6, 23, 0.75); backdrop-filter: blur(4px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px;">
-        <div style="background-color: #ffffff; max-w: 600px; w: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
-            <button onclick="toggleAuthPopup(false)" style="position: absolute; top: 16px; right: 16px; background-color: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 9999px; cursor: pointer; font-weight: bold; color: #64748b;">✕</button>
-            <div style="text-align: center;"><h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0;">Select Designated Gateway Node</h3></div>
-            <div style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; display: grid;">
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
-                    <div><div style="color: #7c3aed; font-weight: 800; font-size: 14px;">🏢 ACT Admin Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Manage website counters, text rows, notice boards and information fields directly.</p></div>
-                    <button onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase;">Login as ACT Admin</button>
-                </div>
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
-                    <div><div style="color: #4f46e5; font-weight: 800; font-size: 14px;">🎓 GM Volunteer Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Log attendance charts, file metrics data cards, and capture university verification credits.</p></div>
-                    <button onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase;">Login as Volunteer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 🛠️ SEPARATE ISOLATED ADMINISTRATIVE MANAGEMENT PANEL VIEW -->
-    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column;">
-        <div style="background-color: #0f172a; color: #ffffff; padding: 16px 24px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
-                <span style="width: 10px; height: 10px; background-color: #a855f7; border-radius: 9999px; display: inline-block;"></span>
-                <span style="font-size: 14px; font-weight: 700;">Granth Mitra Public Website Management Panel</span>
-            </div>
-            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer;">Log Out Dashboard</button>
-        </div>
-
-        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden;">
-            <aside style="width: 240px; background-color: #020617; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid #1e293b; box-sizing: border-box;">
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px;">Branding Modules</div>
-                    <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 700;">
-                        <button onclick="showAdminSection('statsSection')" style="width: 100%; border: none; text-align: left; background: none; color: #c084fc; padding: 10px; border-radius: 8px; cursor: pointer;">📊 Statistics</button>
-                        <button onclick="showAdminSection('noticeSection')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer;">📢 Notice Board</button>
-                        <button onclick="showAdminSection('aboutSection')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer;">📝 About Context</button>
-                        <button onclick="showAdminSection('contactSection')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer;">📞 Contact Desk</button>
-                    </div>
-                </div>
-            </aside>
-
-            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
-                
-                <!-- SECTION 1: STATISTICS EDITOR -->
-                <div id="statsSection" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Update Module: Public Statistics Counters</h4></div>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Active Volunteers</label><input id="inputVolunteers" type="text" value="150+" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Partner Colleges</label><input id="inputColleges" type="text" value="35+" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Government Schools</label><input id="inputSchools" type="text" value="50+" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Students Mentored</label><input id="inputPupils" type="text" value="10,000+" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                    </div>
-                </div>
-
-                <!-- SECTION 2: NOTICE BOARD EDITOR -->
-                <div id="noticeSection" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Update Module: Calendar & Announcements Feed</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 14px;">
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Announcement Target Date</label><input id="inputNoticeDate" type="text" value="AUGUST 12, 2026" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Announcement Header Title</label><input id="inputNoticeHeader" type="text" value="Volunteer Orientation Framework" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Briefing Descriptions Content</label><textarea id="inputNoticeDesc" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none; height: 80px; font-family: sans-serif;">Mandatory cluster orientation details review at ACT Head office point.</textarea></div>
-                    </div>
-                </div>
-
-                <!-- SECTION 3: ABOUT CONTEXT EDITOR -->
-                <div id="aboutSection" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Update Module: Programme About Text Narrative</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Main Narrative Body Description</label><textarea id="inputAboutText" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none; height: 100px; font-family: sans-serif;">Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.</textarea></div>
-                </div>
-
-                <!-- SECTION 4: CONTACT DESK EDITOR -->
-                <div id="contactSection" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Update Module: Footer Core Contact Information</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Direct Help Desk Numbers & Email Text Block</label><textarea id="inputFooterContact" style="background-color: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; padding: 12px; border-radius: 8px; outline: none; height: 80px; font-family: sans-serif;">Desk Help: +91 98765 43210&#10;Email: desk@akankshatrust.org</textarea></div>
-                </div>
-
-                <!-- MASTER OPERATION BLOCK BUTTON -->
-                <div style="display: flex; justify-content: flex-end; padding-top: 16px; margin-top: auto;">
-                    <button onclick="commitDashboardChanges()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);">
-                        Publish Live Content Updates
-                    </button>
-                </div>
-            </main>
-        </div>
-    </div>
-
-    <!-- ⚙️ RUNTIME LOGIC ENGINE -->
-    <script>
-        function toggleAuthPopup(show) {
-            const popup = document.getElementById('authPopup');
-            if (popup) popup.style.display = show ? 'flex' : 'none';
-        }
-
-        function executeVolunteerRedirect() {
-            toggleAuthPopup(false);
-            alert("➔ Redirecting Session: Safely exiting the public-facing application workspace to authenticate your individual credentials on the separate Google Apps Script `/volunteer-dashboard` framework web app.");
-            window.open("https://google.com", "_blank");
-        }
-
-        function executeAdminNodeLogin() {
-            const accessKey = prompt("🔒 Enter ACT Admin Dashboard Security Passkey:");
-            if (!accessKey) return;
-
-            // 🔑 TO CHANGE THE SECURITY PASSWORD:
-            // Swap out "actAdmin2026" inside the quotes below with your preferred token code string.
-            if (accessKey === "GMAdmin@ACT2026") {
-                toggleAuthPopup(false);
-                const dashboard = document.getElementById('privateAdminDashboard');
-                if (dashboard) dashboard.style.display = 'flex';
-            } else {
-                alert("❌ Access Denied: Invalid security authorization key.");
-            }
-        }
-
-        function closeAdminDashboard() {
-            const dashboard = document.getElementById('privateAdminDashboard');
-            if (dashboard) dashboard.style.display = 'none';
-        }
-
-        function showAdminSection(sectionId) {
-            document.getElementById('statsSection').style.display = 'none';
-            document.getElementById('noticeSection').style.display = 'none';
-            document.getElementById('aboutSection').style.display = 'none';
-            document.getElementById('contactSection').style.display = 'none';
-            
-            document.getElementById(sectionId).style.display = 'flex';
-        }
-
-        function commitDashboardChanges() {
-            const volCount = document.getElementById('inputVolunteers').value;
-            const collegesCount = document.getElementById('inputColleges').value;
-            const schCount = document.getElementById('inputSchools').value;
-            const pupilsCount = document.getElementById('inputPupils').value;
-            
-            const nDate = document.getElementById('inputNoticeDate').value;
-            const nHeader = document.getElementById('inputNoticeHeader').value;
-            const nDesc = document.getElementById('inputNoticeDesc').value;
-            
-            const abText = document.getElementById('inputAboutText').value;
-            const footCon = document.getElementById('inputFooterContact').value;
-
-            if (document.getElementById('statVolunteers')) document.getElementById('statVolunteers').innerText = volCount;
-            if (document.getElementById('statColleges')) document.getElementById('statColleges').innerText = collegesCount;
-            if (document.getElementById('statSchools')) document.getElementById('statSchools').innerText = schCount;
-            if (document.getElementById('statPupils')) document.getElementById('statPupils').innerText = pupilsCount;
-            
-            if (document.getElementById('display-noticeDate')) document.getElementById('display-noticeDate').innerText = nDate;
-            if (document.getElementById('display-noticeHeader')) document.getElementById('display-noticeHeader').innerText = nHeader;
-            if (document.getElementById('display-noticeDesc')) document.getElementById('display-noticeDesc').innerText = nDesc;
-            
-            if (document.getElementById('display-aboutText')) document.getElementById('display-aboutText').innerText = abText;
-            if (document.getElementById('display-footerContact')) document.getElementById('display-footerContact').innerHTML = footCon.replace(/\n/g, '<br>');
-
-            closeAdminDashboard();
-            alert("💾 Website Content Published: Form elements written successfully onto your landing page. Changes are now instantly active for public visitors.");
-        }
-    </script>
-</body>
-</html>
