@@ -36,7 +36,14 @@
     </header>
     <!-- 🎯 3. PREMIUM HERO HUB SECTION (With Custom Painted Brush Border Composition) -->
     <section style="background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #ffffff; padding: 80px 40px; overflow: hidden; text-align: left;">
-        <div style="width: 100%; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center; box-sizing: border-box;">
+        <div style="display: grid; grid-template-columns: repeat(1, 1fr); display: -ms-grid; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; width: 100%; justify-content: center; box-sizing: border-box;" class="desktop-four-row">
+            <style>
+                @media (min-width: 1024px) {
+                    .desktop-four-row {
+                        grid-template-columns: repeat(4, 1fr) !important;
+                    }
+                }
+            </style>
             
             <!-- Left Side Descriptive Text Column -->
             <div style="display: flex; flex-direction: column; gap: 24px;">
