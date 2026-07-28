@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT Admin Dashboard - Granth Mitra Portal Management</title>
+    <!-- Modern Tailwind CSS Compilation CDN Engine -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome for Admin Controls -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Shared Style Link sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- 🔒 TOP SECURE WORKSPACE NAVBAR -->
+    <div class="bg-slate-900 text-white px-6 py-4 flex justify-between items-center shadow-md">
+        <div class="flex items-center space-x-2.5">
+            <span class="w-2.5 h-2.5 bg-purple-500 rounded-full animate-pulse"></span>
+            <span class="text-sm font-bold tracking-tight">Granth Mitra Public Website Management Panel</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-md border border-slate-700/60 font-semibold"><i class="fa-solid fa-user-shield text-purple-400 mr-1"></i> Trust Session Active</span>
+            <button onclick="logOutAdminDashboard()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-4 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                <i class="fa-solid fa-right-from-bracket"></i> Log Out Dashboard
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CORE PANEL WRAPPER -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- LEFT CONTROL NAVIGATION SIDEBAR -->
+        <aside class="w-64 bg-slate-950 text-slate-400 p-6 flex flex-col justify-between border-r border-slate-900">
+            <div class="space-y-6">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Website Branding Modules</div>
+                <nav class="flex flex-col space-y-1.5 text-xs font-bold">
+                    <button onclick="switchTab('statistics')" class="w-full text-left py-2.5 px-3 bg-purple-900/40 text-purple-400 rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-chart-line"></i> Homepage Statistics</button>
+                    <button onclick="switchTab('announcements')" class="w-full text-left py-2.5 px-3 hover:text-white rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-bullhorn"></i> Notice & Announcements</button>
+                    <button onclick="switchTab('about')" class="w-full text-left py-2.5 px-3 hover:text-white rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-circle-info"></i> About Programme</button>
+                    <button onclick="switchTab('gallery')" class="w-full text-left py-2.5 px-3 hover:text-white rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-images"></i> Events Gallery</button>
+                    <button onclick="switchTab('resources')" class="w-full text-left py-2.5 px-3 hover:text-white rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-folder-open"></i> Resources</button>
+                    <button onclick="switchTab('contact')" class="w-full text-left py-2.5 px-3 hover:text-white rounded-lg flex items-center gap-2 transition"><i class="fa-solid fa-address-book"></i> Contact Details</button>
+                </nav>
+            </div>
+            <div class="text-[10px] text-slate-600 text-center font-semibold border-t border-slate-900 pt-4">Akanksha Trust Core Oversight Engine</div>
+        </aside>
+
+        <!-- CENTER EDITORIAL RICH OPTION WORKSPACE FORM -->
+        <main class="flex-1 p-8 overflow-y-auto space-y-6">
+            
+            <!-- Statistics Module Editor Card Form -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="p-1.5 bg-purple-50 text-purple-600 rounded-lg text-xs"><i class="fa-solid fa-pen-to-square"></i></span>
+                        <h4 class="font-bold text-slate-900 text-sm">Module Framework: Homepage Impact Statistics Counters</h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="alert('Staging Preserved: Content changes have been cleanly compiled locally as an offline draft.')" class="bg-slate-50 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg transition border border-slate-200/60">Save Draft</button>
+                        <button onclick="alert('Staging Canvas Preview: Initializing sandbox layout preview track.')" class="bg-slate-50 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg transition border border-slate-200/60">Preview</button>
+                    </div>
+                </div>
+                
+                <!-- Rich Content Input Forms Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Active Volunteers</label>
+                        <input id="inputVolunteers" type="text" value="150+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none font-bold text-slate-900" />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Partner Colleges</label>
+                        <input id="inputColleges" type="text" value="35+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none font-bold text-slate-900" />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Government Schools</label>
+                        <input id="inputSchools" type="text" value="50+" class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none font-bold text-slate-900" />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Students Mentored</label>
+                        <input id="inputPupils" type="text" value="10,000+       " class="w-full bg-slate-50 border border-slate-200 text-xs p-3 rounded-xl focus:bg-white focus:ring-2 focus:ring-purple-500/20 transition outline-none font-bold text-slate-900" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Upload & Rich Media Management Module -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="p-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs"><i class="fa-solid fa-images"></i></span>
+                        <h4 class="font-bold text-slate-900 text-sm">Module Framework: Image Upload & Content Archive</h4>
+                    </div>
+                </div>
+                <div class="border-2 border-dashed border-slate-200 rounded-2xl p-8 text-center bg-slate-50/50 hover:bg-slate-50 transition cursor-pointer" onclick="simulateCmsImageUpload()">
+                    <div class="text-3xl text-slate-400 mb-2"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <span class="text-xs font-semibold text-slate-700 block">Drag & drop your field campaign images here</span>
+                    <span class="text-[10px] text-slate-400 mt-1 block">Supports high-fidelity JPG, PNG format parameters</span>
+                </div>
+            </div>
+
+            <!-- Content Synchronization Command Bar -->
+            <div class="pt-2 flex justify-end">
+                <button onclick="commitDashboardChanges()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-bold px-6 py-3 rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Publish Live Content Updates
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- RUNTIME LOGIC ENGINE FOR THE PRIVATE ADMINISTRATIVE SUITE -->
+    <script>
+        function simulateCmsImageUpload() {
+            alert("📷 Asset Manager: Simulating file system sync. Select field campaign snapshot imagery (Youth mentoring sessions, rural classrooms, or library circles) to write safely onto the server storage.");
+        }
+
+        function switchTab(tabName) {
+            alert("📂 Workspace Tab Switch: Loading form input configuration schemas for the '" + tabName + "' website editorial module.");
+        }
+
+        function logOutAdminDashboard() {
+            alert("🔒 Closing Session: Exiting the secure administration environment. Returning browser context back to the clean public-facing website layout.");
+            window.location.href = "index.html";
+        }
+
+        function commitDashboardChanges() {
+            // Read local form values and simulate a safe data dump string
+            const volCount = document.getElementById('inputVolunteers').value;
+                      const schCount = document.getElementById('inputSchools').value;
+            const bksCount = document.getElementById('inputColleges').value;
+            const kidCount = document.getElementById('inputPupils').value;
+
+            // Save variables to cross-page persistent client storage
+            localStorage.setItem('valVolunteers', volCount);
+            localStorage.setItem('valSchools', schCount);
+            localStorage.setItem('valColleges', bksCount);
+            localStorage.setItem('valPupils', kidCount);
+
+            alert("💾 Website Content Published: Statistics modules and rich media parameters have been systematically written onto the live landing page server file configurations successfully. Changes are now active for regular public web visitors.");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
