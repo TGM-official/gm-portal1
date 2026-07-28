@@ -1,0 +1,34 @@
+/* Granth Mitra Premium NGO Typography Configurations */
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+}
+
+/* Premium Rounded Card Soft Shadows Grid */
+.glow-subtle {
+    box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.15);
+}
+
+/* Administrative Control Panel Edit State Indicator Outline */
+.cms-editable-active {
+    outline: 2px dashed #8b5cf6;
+    position: relative;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% { outline-color: #8b5cf6; }
+    50% { outline-color: #c084fc; }
+}
+
+/* Focused active content input forms */
+[contenteditable="true"]:focus {
+    outline: 2px solid #3b82f6;
+    background-color: rgba(243, 244, 246, 0.9);
+    border-radius: 6px;
+}
