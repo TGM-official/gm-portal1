@@ -7,39 +7,46 @@
 </head>
 <body style="background-color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; color: #1e293b;">
 
-    <!-- 🏢 DUAL-BRANDED NAVIGATION HEADER -->
+    <!-- 🏢 DUAL-BRANDED NAVIGATION HEADER (Absolute Far-Left & Far-Right Separation) -->
     <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 40; height: 96px; display: flex; align-items: center; width: 100%;">
         <div style="width: 100%; padding: 0 40px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box;">
+            
+            <!-- Left Side Element Array -->
             <div style="display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left;">
+                
+                <!-- 🎯 TRUE FILE-UPLOADER BRAND LOGO CONTAINER (Controlled Live From Your Device) -->
                 <div style="width: 90px; height: 52px; background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); flex-shrink: 0;">
-                    <img id="display-brandLogoNav" src="logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#ffffff; font-size:12px; font-weight:900; letter-spacing:0.5px;\'>ACT LOGO</span>';"/>
+                    <img id="display-brandLogoNav" src="logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain; display: block;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' viewBox=\'0 0 100 50\'><text x=\'50%\' y=\'60%\' font-size=\'12\' font-weight=\'bold\' fill=\'%23ffffff\' text-anchor=\'middle\'>ACT LOGO</text></svg>';"/>
                 </div>
+
                 <div style="display: flex; flex-direction: column; justify-content: center;">
                     <span style="font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; line-height: 1.2;">GRANTH MITRA | ಗ್ರಂಥಮಿತ್ರ</span>
                     <span style="font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; line-height: 1;">Initiative of Akanksha Charitable Trust</span>
                 </div>
             </div>
-                        <!-- Far Right Portal Login Capsule Button (With Restored Click Interactive Trigger Engine) -->
+
+            <!-- Far Right Portal Login Capsule Button -->
             <div style="text-align: right; flex-shrink: 0;">
-                <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 14px 32px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); cursor: pointer; min-width: 160px; text-align: center; font-family: sans-serif; outline: none;">
+                <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 14px 32px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); cursor: pointer; min-width: 160px; text-align: center; outline: none;">
                     PORTAL LOGIN
                 </button>
             </div>
 
-        </div> 
+        </div>
     </header>
 
     <!-- 🎯 PREMIUM HERO HUB SECTION BANNER -->
     <section style="background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #ffffff; padding: 80px 40px; overflow: hidden; text-align: left;">
-        <div style="width: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box; flex-wrap: wrap; gap: 48px;">
+        <div style="width: 100%; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; gap: 48px; align-items: center; box-sizing: border-box;">
+            
             <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 24px;">
                 <div style="align-self: flex-start; background-color: rgba(99, 102, 241, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); padding: 6px 16px; border-radius: 9999px; color: #818cf8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
                     ✨ Akanksha Charitable Trust Flagship Initiative
                 </div>
-                <h1 id="display-heroHeadline" style="font-size: 40px; font-weight: 800; margin: 0; color: #ffffff; line-height: 1.2;">
+                <h1 style="font-size: 40px; font-weight: 800; margin: 0; color: #ffffff; line-height: 1.2;">
                     Empowering Rural Education Through Youth Mentorship
                 </h1>
-                <p id="display-heroSubheading" style="font-size: 15px; color: #cbd5e1; line-height: 1.6; margin: 0; max-w: 600px;">
+                <p style="font-size: 15px; color: #cbd5e1; line-height: 1.6; margin: 0; max-w: 600px;">
                     Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust where college students dedicate their time to mentoring rural government school students through weekly learning sessions, reading activities, life skills, and community engagement to build a stronger society.
                 </p>
                 <div style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap; margin-top: 8px;">
@@ -47,691 +54,194 @@
                     <button style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 16px 32px; border-radius: 12px; cursor: pointer;">Explore the Programme</button>
                 </div>
             </div>
+
+            <!-- Right Side Visual Box containing the true Device Replaceable Artwork Image Frame -->
             <div style="display: flex; justify-content: center; position: relative;">
                 <div style="position: relative; width: 380px; height: 380px; display: flex; align-items: center; justify-content: center;">
+                    
                     <div style="position: absolute; width: 100%; height: 100%; border: 3px solid #dc2626; border-radius: 9999px; border-style: dashed; opacity: 0.6; transform: rotate(-10deg);"></div>
                     <div style="position: absolute; width: 92%; height: 92%; border: 2px solid #2563eb; border-radius: 9999px; border-style: dashed; opacity: 0.6; transform: rotate(25deg);"></div>
-                    <div style="width: 280px; height: 260px; background-color: #020617; border-radius: 9999px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); gap: 12px;">
-                        <span style="font-size: 56px; display: block;">🧑‍🏫</span>
-                        <div style="width: 64px; height: 3px; background: linear-gradient(to right, #dc2626, #2563eb); border-radius: 9999px;"></div>
-                        <span style="font-size: 9px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Weekly Learning Loop</span>
+                    
+                    <!-- 🎯 TRUE FILE-UPLOADER CLASSROOM GRAPHIC FRAME (Controlled Live From Your Device) -->
+                    <div style="width: 280px; height: 260px; background-color: #020617; border-radius: 9999px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); overflow: hidden; position: relative; z-index: 10;">
+                        <img id="display-mascotLoopImage" src="mascot.png" alt="Weekly Loop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size: 56px; display: block; text-align:center;\'>🧑‍🏫</span><div style=\'width: 64px; height: 3px; background: linear-gradient(to right, stroke, %234f46e5); border-radius: 9999px; margin: 4px auto;\'></div><span style=\'font-size: 9px; font-weight: 700; color: %2364748b; text-transform: uppercase; letter-spacing: 1px; text-align:center;\'>WEEKLY LEARNING LOOP</span>';"/>
                     </div>
-                    <div style="position: absolute; top: 15px; right: -15px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap;">💜 Community Driven</div>
-                    <div style="position: absolute; top: 160px; left: -45px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap;">🎓 Education Focused</div>
-                    <div style="position: absolute; bottom: 15px; right: 15px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap;">🔥 Impact Oriented</div>
+
+                    <div style="position: absolute; top: 15px; right: -15px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap; z-index: 15;">💜 Community Driven</div>
+                    <div style="position: absolute; top: 160px; left: -45px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap; z-index: 15;">🎓 Education Focused</div>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap; z-index: 15;">🔥 Impact Oriented</div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- 📊 DYNAMIC PERFORMANCE COUNTERS ROW (Bypasses Grid Blocks for Strict 4-per-row Layout Arrangement) -->
+    <!-- 📊 DYNAMIC PERFORMANCE COUNTERS ROW (Impact Section - Fixed Symmetrical Grid) -->
     <section id="impact" style="max-w: 1200px; margin: -40px auto 0 auto; padding: 0 24px; position: relative; z-index: 20; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        
-        <!-- Row 1 Card 1 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #f0fdf4; color: #16a34a; border-radius: 12px; display: flex; align-items: center; justify-content: center;">👥</div>
-            <div><div id="statVolunteers" style="font-size: 20px; font-weight: 800; color: #0f172a;">150+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Active Volunteers</div></div>
+            <div><div id="statVolunteers" style="font-size: 20px; font-weight: 800; color: #0f172a;">179+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Active Volunteers</div></div>
         </div>
-
-        <!-- Row 1 Card 2 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #f3f4f6; color: #4b5563; border-radius: 12px; display: flex; align-items: center; justify-content: center;">🏢</div>
-            <div><div id="statColleges" style="font-size: 20px; font-weight: 800; color: #0f172a;">35+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Partner Colleges</div></div>
+            <div><div id="statColleges" style="font-size: 20px; font-weight: 800; color: #0f172a;">01+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Partner Colleges</div></div>
         </div>
-
-        <!-- Row 1 Card 3 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #eff6ff; color: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center;">🏫</div>
-            <div><div id="statSchools" style="font-size: 20px; font-weight: 800; color: #0f172a;">50+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Govt Schools</div></div>
+            <div><div id="statSchools" style="font-size: 20px; font-weight: 800; color: #0f172a;">07+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Govt Schools</div></div>
         </div>
-
-        <!-- Row 1 Card 4 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #fdf2f8; color: #db2777; border-radius: 12px; display: flex; align-items: center; justify-content: center;">📚</div>
-            <div><div id="statLibraries" style="font-size: 20px; font-weight: 800; color: #0f172a;">35 Active</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Public Libraries</div></div>
+            <div><div id="statLibraries" style="font-size: 20px; font-weight: 800; color: #0f172a;">03 Active</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Public Libraries</div></div>
         </div>
-
-        <!-- Row 2 Card 1 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #fef3c7; color: #d97706; border-radius: 12px; display: flex; align-items: center; justify-content: center;">👶</div>
-            <div><div id="statPupils" style="font-size: 20px; font-weight: 800; color: #0f172a;">10,000+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Students Mentored</div></div>
+            <div><div id="statPupils" style="font-size: 20px; font-weight: 800; color: #0f172a;">570+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Students Mentored</div></div>
         </div>
-
-        <!-- Row 2 Card 2 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #f0fdfa; color: #0d9488; border-radius: 12px; display: flex; align-items: center; justify-content: center;">🗺️</div>
-            <div><div id="statDistricts" style="font-size: 20px; font-weight: 800; color: #0f172a;">12</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Districts Covered</div></div>
+            <div><div id="statDistricts" style="font-size: 20px; font-weight: 800; color: #0f172a;">2+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Districts Covered</div></div>
         </div>
-
-        <!-- Row 2 Card 3 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #faf5ff; color: #7c3aed; border-radius: 12px; display: flex; align-items: center; justify-content: center;">⏱️</div>
-            <div><div id="statHours" style="font-size: 20px; font-weight: 800; color: #0f172a;">25,000+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Volunteer Hours</div></div>
+            <div><div id="statHours" style="font-size: 20px; font-weight: 800; color: #0f172a;">870+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Volunteer Hours</div></div>
         </div>
-
-        <!-- Row 2 Card 4 -->
-        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box;">
+        <div style="width: 23%; min-width: 260px; background-color: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left; box-sizing: border-box; flex-grow: 1;">
             <div style="font-size: 22px; width: 44px; height: 44px; background-color: #fff7ed; color: #ea580c; border-radius: 12px; display: flex; align-items: center; justify-content: center;">👨‍🏫</div>
-            <div><div id="statSessions" style="font-size: 20px; font-weight: 800; color: #0f172a;">1,800+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Learning Sessions</div></div>
-        </div>
-
-    </section>
-    <!-- 📖 5. ABOUT GRANTH MITRA MISSION CONTEXT CARDS ROW -->
-    <section id="about" style="max-w: 1200px; margin: 64px auto; padding: 0 40px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 24px; box-sizing: border-box; text-align: left;">
-        
-        <!-- Left Column Card: Why the Programme was Started -->
-        <div style="flex: 1; min-width: 320px; background-color: #ffffff; padding: 32px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 16px; box-sizing: border-box;">
-            <div style="align-self: flex-start; background-color: #eff6ff; padding: 4px 12px; border-radius: 6px; color: #2563eb; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Mission Parameters</div>
-            <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin: 0; line-height: 1.2;">Why the Programme was Started</h2>
-            <p id="display-aboutText" style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">
-                Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.
-            </p>
-        </div>
-
-        <!-- Right Column Card: Core Programme Objective -->
-        <div style="flex: 1; min-width: 320px; background-color: #ffffff; padding: 32px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-sizing: border-box; position: relative;">
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-                <div style="align-self: flex-start; background-color: #faf5ff; padding: 4px 12px; border-radius: 6px; color: #7c3aed; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Target Objectives</div>
-                <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0;">Core Programme Objective</h3>
-                <p id="display-objectiveText" style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">
-                    Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.
-                </p>
-            </div>
-            
-            <!-- Requested Bold Sign-off Footer Accent Block -->
-            <div style="border-top: 1px solid #f1f5f9; padding-top: 16px; font-size: 13px; color: #0f172a; font-weight: 800; display: flex; align-items: center; gap: 6px; margin-top: auto;">
-                🏢 <span id="display-trustSignoff">Akanksha Charitable Trust (ACT)</span>
-            </div>
-        </div>
-
-    </section>
-    <!-- ⏳ 6. HOW THE PROGRAMME WORKS (6-Step Timeline Track) -->
-    <section style="background-color: #0f172a; color: #ffffff; padding: 64px 40px; margin: 32px 0 0 0; text-align: left; box-sizing: border-box;">
-        <div style="width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; box-sizing: border-box;">
-            
-            <!-- Timeline Header Labels -->
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <span style="color: #c084fc; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px;">Field Sequence</span>
-                <h2 style="font-size: 28px; font-weight: 800; tracking-tight: -0.5px; margin: 0; color: #ffffff;">The Structural Six-Step Engagement Track</h2>
-            </div>
-            
-            <!-- Timeline Steps Container Matrix -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; box-sizing: border-box; width: 100%;">
-                
-                <!-- Step 01 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 01</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">College Students Register</h4>
-                </div>
-
-                <!-- Step 02 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 02</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">Volunteer Orientation</h4>
-                </div>
-
-                <!-- Step 03 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 03</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">Library Allocation</h4>
-                </div>
-
-                <!-- Step 04 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 04</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">Weekly Mentoring</h4>
-                </div>
-
-                <!-- Step 05 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 05</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">Activity Reporting</h4>
-                </div>
-
-                <!-- Step 06 -->
-                <div style="background-color: #1e293b; padding: 24px 20px; border-radius: 16px; border: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box;">
-                    <div style="color: #c084fc; font-family: monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">Step 06</div>
-                    <h4 style="font-size: 14px; font-weight: 700; margin: 0; color: #ffffff; line-height: 1.3;">Impact Matrix</h4>
-                </div>
-
-            </div>
+            <div><div id="statSessions" style="font-size: 20px; font-weight: 800; color: #0f172a;">435+</div><div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Learning Sessions</div></div>
         </div>
     </section>
-    <!-- 🎴 7. PROGRAMME AREAS GRID BLOCK (With Dynamic Admin-Replaceable Image Background Slots) -->
-    <section id="areas" style="max-w: 1200px; margin: 64px auto; padding: 0 40px; text-align: left; box-sizing: border-box;">
-        
-        <!-- Section Title Headers -->
-        <div style="text-align: center; max-w: 600px; margin: 0 auto 48px auto; display: flex; flex-direction: column; gap: 8px;">
-            <span style="color: #4f46e5; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px;">Curriculum Focus</span>
-            <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin: 0;">Attractive Programme Areas</h2>
-        </div>
-        
-        <!-- Curriculum Grid (4-In-A-Row Matrix layout) -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; box-sizing: border-box; width: 100%;">
-            
-            <!-- Card 1: Reading & Library Activities -->
-            <div id="cardBg-Reading" style="background-color: #ffffff; background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('curriculum-reading.jpg'); background-size: cover; background-position: center; padding: 40px 24px; border-radius: 24px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); transition: transform 0.3s; min-height: 200px; justify-content: flex-end; box-sizing: border-box;">
-                <div style="font-size: 32px; margin-bottom: auto;">📖</div>
-                <h3 style="font-size: 18px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">Reading & Library Activities</h3>
-            </div>
 
-            <!-- Card 2: Science Experiments -->
-            <div id="cardBg-Science" style="background-color: #ffffff; background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('curriculum-science.jpg'); background-size: cover; background-position: center; padding: 40px 24px; border-radius: 24px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); transition: transform 0.3s; min-height: 200px; justify-content: flex-end; box-sizing: border-box;">
-                <div style="font-size: 32px; margin-bottom: auto;">🧪</div>
-                <h3 style="font-size: 18px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">Science Experiments</h3>
-            </div>
-
-            <!-- Card 3: Mathematics Support -->
-            <div id="cardBg-Math" style="background-color: #ffffff; background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('curriculum-math.jpg'); background-size: cover; background-position: center; padding: 40px 24px; border-radius: 24px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); transition: transform 0.3s; min-height: 200px; justify-content: flex-end; box-sizing: border-box;">
-                <div style="font-size: 32px; margin-bottom: auto;">📐</div>
-                <h3 style="font-size: 18px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">Mathematics Support</h3>
-            </div>
-
-            <!-- Card 4: English Communication -->
-            <div id="cardBg-English" style="background-color: #ffffff; background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('curriculum-english.jpg'); background-size: cover; background-position: center; padding: 40px 24px; border-radius: 24px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); transition: transform 0.3s; min-height: 200px; justify-content: flex-end; box-sizing: border-box;">
-                <div style="font-size: 32px; margin-bottom: auto;">🗣️</div>
-                <h3 style="font-size: 18px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">English Communication</h3>
-            </div>
-
-        </div>
-    </section>
-                
-                 <!-- 📢 8. THREE-EVENT NOTICE BOARD FEED & REPLACEABLE OPERATIONS GALLERY -->
-    <section id="events" style="background-color: #f1f5f9; padding: 64px 40px; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; text-align: left; box-sizing: border-box;">
-        <div style="max-w: 1200px; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; gap: 48px; box-sizing: border-box;">
-            
-            <!-- Left Side: Balanced 3-Event Live Announcement Stack Feed -->
-            <div style="flex: 1.2; min-width: 320px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box;">
-                <div>
-                    <span style="color: #7c3aed; background-color: #f3e8ff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Notice Board</span>
-                    <h3 style="font-size: 26px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0; line-height: 1.2;">Events & Announcements</h3>
-                </div>
-                
-                <!-- Vertical Stack of Exactly 3 Monitored Event Slots -->
-                <div style="display: flex; flex-direction: column; gap: 14px; box-sizing: border-box;">
-                    <!-- Event Slot 1 -->
-                    <div style="background-color: #ffffff; padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.01);">
-                        <div id="display-eventDate1" style="font-weight: 700; color: #4f46e5; font-size: 11px; margin-bottom: 4px;">AUGUST 12, 2026</div>
-                        <h4 id="display-eventHeader1" style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.3;">Volunteer Orientation Framework</h4>
-                        <p id="display-eventDesc1" style="color: #64748b; font-size: 13px; margin: 4px 0 0 0; line-height: 1.5;">Mandatory cluster orientation details review at ACT Head office point.</p>
-                    </div>
-                    <!-- Event Slot 2 -->
-                    <div style="background-color: #ffffff; padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.01);">
-                        <div id="display-eventDate2" style="font-weight: 700; color: #4f46e5; font-size: 11px; margin-bottom: 4px;">AUGUST 19, 2026</div>
-                        <h4 id="display-eventHeader2" style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.3;">Saturday Session Kit Distribution</h4>
-                        <p id="display-eventDesc2" style="color: #64748b; font-size: 13px; margin: 4px 0 0 0; line-height: 1.5;">Collection of science experiment manual guides and math activity charts.</p>
-                    </div>
-                    <!-- Event Slot 3 -->
-                    <div style="background-color: #ffffff; padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.01);">
-                        <div id="display-eventDate3" style="font-weight: 700; color: #4f46e5; font-size: 11px; margin-bottom: 4px;">AUGUST 26, 2026</div>
-                        <h4 id="display-eventHeader3" style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.3;">Mid-Term Regional Cluster Audit</h4>
-                        <p id="display-eventDesc3" style="color: #64748b; font-size: 13px; margin: 4px 0 0 0; line-height: 1.5;">Reviewing library logging sheets and text comprehension score metrics.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Side: Active Field Operations Gallery Replaceable Slots -->
-            <div id="gallery" style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box;">
-                <div>
-                    <span style="color: #2563eb; background-color: #eff6ff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Field Visuals</span>
-                    <h3 style="font-size: 26px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0; line-height: 1.2;">Operations Gallery</h3>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; box-sizing: border-box; width: 100%;">
-                    <div id="galleryBg-1" style="aspect-ratio: 1; background-color: #1e293b; background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8)), url('gallery-1.jpg'); background-size: cover; background-position: center; border-radius: 16px; display: flex; align-items: flex-end; padding: 12px; box-sizing: border-box; border: 1px solid #cbd5e1;">
-                        <span style="font-size: 10px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Library Sessions</span>
-                    </div>
-                    <div id="galleryBg-2" style="aspect-ratio: 1; background-color: #1e293b; background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8)), url('gallery-2.jpg'); background-size: cover; background-position: center; border-radius: 16px; display: flex; align-items: flex-end; padding: 12px; box-sizing: border-box; border: 1px solid #cbd5e1;">
-                        <span style="font-size: 10px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Science Activities</span>
-                    </div>
-                    <div id="galleryBg-3" style="aspect-ratio: 1; background-color: #1e293b; background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8)), url('gallery-3.jpg'); background-size: cover; background-position: center; border-radius: 16px; display: flex; align-items: flex-end; padding: 12px; box-sizing: border-box; border: 1px solid #cbd5e1;">
-                        <span style="font-size: 10px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Reading Circles</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-      <!-- 📥 9. CORRECTED DOWNLOADABLE RESOURCES MATRIX & INTEGRATED TESTIMONIAL AUTO-SLIDER -->
-    <section id="resources" style="max-w: 1200px; margin: 64px auto; padding: 0 40px; display: flex; flex-direction: row; flex-wrap: wrap; gap: 48px; text-align: left; box-sizing: border-box;">
-        
-        <!-- Left Side Column: Enforced 2x2 Downloadable File Cards Grid Module -->
-        <div style="flex: 1.3; min-width: 320px; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
-            <div>
-                <span style="color: #4f46e5; background-color: #eff6ff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Training Assets</span>
-                <h3 style="font-size: 26px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0; line-height: 1.2;">Downloadable Program Resources</h3>
-            </div>
-            
-            <!-- Strict Symmetrical 2x2 Flex Row Splitting -->
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; width: 100%; box-sizing: border-box;">
-                <!-- Card 1 -->
-                <div style="width: 48%; min-width: 240px; background-color: #ffffff; padding: 18px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; align-items: center; gap: 14px; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.01); flex-grow: 1;">
-                    <span style="font-size: 26px; color: #dc2626; line-height: 1; flex-shrink: 0;">📄</span>
-                    <div>
-                        <h4 id="display-resTitle1" style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.2;">Volunteer Handbook</h4>
-                        <div id="display-resMeta1" style="font-size: 11px; color: #94a3b8; margin-top: 3px;">PDF Document · 2.4 MB</div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div style="width: 48%; min-width: 240px; background-color: #ffffff; padding: 18px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; align-items: center; gap: 14px; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.01); flex-grow: 1;">
-                    <span style="font-size: 26px; color: #dc2626; line-height: 1; flex-shrink: 0;">📄</span>
-                    <div>
-                        <h4 id="display-resTitle2" style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.2;">Activity Manual Guides</h4>
-                        <div id="display-resMeta2" style="font-size: 11px; color: #94a3b8; margin-top: 3px;">PDF Document · 4.1 MB</div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div style="width: 48%; min-width: 240px; background-color: #ffffff; padding: 18px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; align-items: center; gap: 14px; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.01); flex-grow: 1;">
-                    <span style="font-size: 26px; color: #dc2626; line-height: 1; flex-shrink: 0;">📄</span>
-                    <div>
-                        <h4 id="display-resTitle3" style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.2;">Weekly Saturday Syllabus</h4>
-                        <div id="display-resMeta3" style="font-size: 11px; color: #94a3b8; margin-top: 3px;">PDF Document · 1.8 MB</div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div style="width: 48%; min-width: 240px; background-color: #ffffff; padding: 18px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: row; align-items: center; gap: 14px; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.01); flex-grow: 1;">
-                    <span style="font-size: 26px; color: #dc2626; line-height: 1; flex-shrink: 0;">📄</span>
-                    <div>
-                        <h4 id="display-resTitle4" style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.2;">Learning Session Plans</h4>
-                        <div id="display-resMeta4" style="font-size: 11px; color: #94a3b8; margin-top: 3px;">PDF Document · 3.5 MB</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Side Column: Dynamic Testimonial Notes Auto-Sliding Display Box Component -->
-        <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
-            <div>
-                <span style="color: #db2777; background-color: #fdf2f8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; padding: 4px 12px; border-radius: 6px;">Community Echoes</span>
-                <h3 style="font-size: 26px; font-weight: 800; color: #0f172a; margin: 8px 0 0 0; line-height: 1.2;">Stakeholder Sliding Notes</h3>
-            </div>
-            
-            <div style="background-color: #ffffff; padding: 32px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; box-sizing: border-box; min-height: 220px; justify-content: center; position: relative;">
-                <div id="display-testimonialQuote" style="font-size: 14px; color: #475569; line-height: 1.6; font-style: italic; margin: 0; min-height: 72px;">
-                    "Loading verified program notes data loops..."
-                </div>
-                <div style="border-top: 1px solid #f1f5f9; padding-top: 14px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-                    <div style="display: flex; flex-direction: column; gap: 2px;">
-                        <span id="display-testimonialName" style="font-size: 14px; font-weight: 800; color: #0f172a;">System Node</span>
-                        <span id="display-testimonialRole" style="font-size: 12px; font-weight: 500; color: #64748b; font-style: italic;">Syncing...</span>
-                    </div>
-                    <div style="display: flex; gap: 8px;">
-                        <button onclick="rotateTestimonial(-1); stopAutoSlide();" style="width: 32px; height: 32px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: bold; color: #64748b; outline: none;">‹</button>
-                        <button onclick="rotateTestimonial(1); stopAutoSlide();" style="width: 32px; height: 32px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: bold; color: #64748b; outline: none;">›</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <script>
-        // Production Default Master Array Variables Setup (Editable via Local Persistence Nodes)
-        let defaultSliderData = [
-            { quote: '"Teaching the children at the local village library every Saturday has been an incredibly fulfilling journey. Watching their comprehension and vocabulary adapt week by week is a proud metric."', name: "Rohan Kumar", role: "College Volunteer mentor" },
-            { quote: '"The structured handbook data assets provided by Akanksha Trust made deploying to our regional centers seamless. This youth leadership curriculum setup transforms careers."', name: "Ananya Hegde", role: "Alumni Coordinator" },
-            { quote: '"Our primary school children look forward to Saturdays with immense energy. Granth Mitra has successfully generated strong support for textbook reading and laboratory cycles."', name: "Dr. M. S. Gowda", role: "Government Village School Headmaster" },
-            { quote: '"Managing the book corner ledger has brought our community closer. Parents are delighted seeing children engage in communication literacy tracks natively."', name: "Savitha Murthy", role: "Village Public Librarian" }
-        ];
-
-        // Hydrate running logic memory arrays
-        let runningSliderData = JSON.parse(localStorage.getItem('actSliderMemory')) || defaultSliderData;
-        if(!localStorage.getItem('actSliderMemory')) {
-            localStorage.setItem('actSliderMemory', JSON.stringify(defaultSliderData));
-        }
-
-        let currentSlideIdx = 0;
-        let autoSlideTimer = null;
-
-        function initTestimonialSlider() {
-            if (runningSliderData.length === 0) {
-                document.getElementById('display-testimonialQuote').innerText = '"No testimonial notes currently loaded into active administration arrays."';
-                document.getElementById('display-testimonialName').innerText = "Empty Slate";
-                document.getElementById('display-testimonialRole').innerText = "ACT System Admin Node";
-                return;
-            }
-            renderSlide(currentSlideIdx);
-            startAutoSlide();
-        }
-
-        function renderSlide(idx) {
-            if(runningSliderData[idx]) {
-                document.getElementById('display-testimonialQuote').innerText = runningSliderData[idx].quote;
-                document.getElementById('display-testimonialName').innerText = runningSliderData[idx].name;
-                document.getElementById('display-testimonialRole').innerText = runningSliderData[idx].role;
-            }
-        }
-
-        function rotateTestimonial(direction) {
-            if (runningSliderData.length === 0) return;
-            currentSlideIdx = (currentSlideIdx + direction + runningSliderData.length) % runningSliderData.length;
-            renderSlide(currentSlideIdx);
-        }
-
-        function startAutoSlide() {
-            stopAutoSlide();
-            autoSlideTimer = setInterval(() => {
-                rotateTestimonial(1);
-            }, 3000); // Strict 3-Second Automated Rotational Window
-        }
-
-        function stopAutoSlide() {
-            if(autoSlideTimer) clearInterval(autoSlideTimer);
-        }
-
-        // Trigger safe loader sequence
-        window.addEventListener('DOMContentLoaded', initTestimonialSlider);
-    </script>
-    <!-- 🗺️ 10. INSTITUTIONAL COMPLIANCE FOOTER GRID (With Dynamic Address-Linked Map) -->
-    <footer id="footer" style="background-color: #020617; text-align: left; color: #94a3b8; font-size: 12px; padding: 64px 40px 32px 40px; border-top: 1px solid #1e293b; box-sizing: border-box; width: 100%; margin-top: 64px;">
-        <div style="max-w: 1200px; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; box-sizing: border-box; width: 100%;">
-            
-            
-            <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box;">
-                <h4 style="font-weight: 700; font-size: 15px; margin: 0; color: #ffffff;">🏢 Granth Mitra Programme</h4>
-                <p id="display-footerBlurb" style="color: #94a3b8; margin: 0; line-height: 1.6; font-size: 12px;">
-                    Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust (ACT) dedicated to empowering rural school students through youth mentorship.
-                </p>
-                <!-- 🎯 FOOTER DYNAMIC BRAND LOGO SLOT (Fully Replaceable and Synced from Admin Dashboard) -->
-                <div style="width: 90px; height: 52px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-top: 4px;">
-                    <img id="display-brandLogoFooter" src="logo.png" alt="ACT Logo" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#ffffff; font-size:11px; font-weight:bold;\'>ACT LOGO</span>';"/>
-                </div>
-            </div>
-
-            <!-- Column 2: Contact Details & Standard Web Regulatory Links Matrix -->
-            <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box;">
-                <h4 style="font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0; color: #ffffff;">Contact Details Desk</h4>
-                <p id="display-footerContact" style="color: #94a3b8; margin: 0; line-height: 1.8; font-size: 12px;">
-                    Desk Help: +91 00000 00000<br>
-                    Email: <a href="mailto:Geck.granthmitra.team@gmail.com" style="color: #6366f1; text-decoration: none;">Geck.granthmitra.team@gmail.com</a>
-                </p>
-                
-                <!-- 🔒 STANDARD REGULATORY COMPLIANCE LINK MATRIX -->
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px;">
-                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading official Akanksha Trust User Privacy Policy and data protection charters.')" style="color: #a5b4fc; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">📄 User Privacy Policy</a>
-                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading Program Terms of Service, credit log guidelines, and school protocol maps.')" style="color: #94a3b8; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">📄 Terms of Service</a>
-                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading system Cookie Disclaimer and browser memory encryption parameters.')" style="color: #94a3b8; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">📄 Cookie Disclaimer</a>
-                </div>
-            </div>
-
-            <!-- Column 3: Headquarters Address & Automatic Synced Map Widget Layout -->
-            <div style="flex: 1.4; min-width: 320px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box;">
-                <h4 style="font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0; color: #ffffff;">Headquarters Address & Location</h4>
-                <p id="display-footerAddress" style="color: #94a3b8; margin: 0; line-height: 1.6; font-size: 12px;">
-                    Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076
-                </p>
-                
-                <!-- 🗺️ SYNCHRONIZED FUNCTIONAL GOOGLE MAPS WINDOW CONTAINER (Fully Admin-Editable Address Target) -->
-                <div id="display-mapIframeWrapper" style="width: 100%; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid #1e293b; background-color: #010409; box-sizing: border-box;">
-                    <iframe id="display-googleMapEmbed" src="https://google.com" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-
-        </div>
-        <div style="max-w: 1200px; margin: 0 auto; padding-top: 32px; border-top: 1px solid #1e293b; text-align: center; font-size: 11px; color: #475569; font-weight: 500;">
-            Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.
-        </div>
-    </footer>
-        <!-- 🏢 11. PORTAL GATEWAY ROUTING MODAL POPUP -->
-    <div id="authPopup" style="position: fixed; inset: 0; background-color: rgba(2, 6, 23, 0.85); backdrop-filter: blur(4px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
-        <div style="background-color: #ffffff; max-w: 600px; w: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; font-family: sans-serif; text-align: center;">
+    <!-- 📄 DUAL AUTH MODAL POPUP GATE -->
+    <div id="authPopup" style="position: fixed; inset: 0; background-color: rgba(2, 6, 23, 0.8); z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+        <div style="background-color: #ffffff; max-w: 560px; w: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
             <button onclick="toggleAuthPopup(false)" style="position: absolute; top: 16px; right: 16px; background-color: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 9999px; cursor: pointer; font-weight: bold; color: #64748b;">✕</button>
-            <div style="display: flex; flex-direction: column; gap: 4px;">
-                <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0;">Select Designated Gateway Node</h3>
-                <p style="font-size: 12px; color: #64748b; margin: 0;">Access administration editing suites or individual volunteer data sheets</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; text-align: left;">
-                <!-- ACT Admin Card -->
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; box-sizing: border-box;">
-                    <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <div style="color: #7c3aed; font-weight: 800; font-size: 14px;">🏢 ACT Admin Login</div>
-                        <p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 0;">Manage statistics records, news updates, slide lists, resources, and contact data maps.</p>
-                    </div>
-                    <button onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">Login as ACT Admin</button>
+            <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0; text-align: center;">Select Designated Gateway Node</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+                    <div><div style="color: #7c3aed; font-weight: 800; font-size: 14px;">🏢 ACT Admin Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Upload fresh device image files, customize layouts and counters grids.</p></div>
+                    <button onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 11px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase;">Login as ACT Admin</button>
                 </div>
-                <!-- Volunteer Card -->
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; box-sizing: border-box;">
-                    <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <div style="color: #4f46e5; font-weight: 800; font-size: 14px;">🎓 GM Volunteer Login</div>
-                        <p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 0;">Log attendance indicators, track university credit balances, and map task files.</p>
-                    </div>
-                    <button onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">Login as Volunteer</button>
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+                    <div><div style="color: #4f46e5; font-weight: 800; font-size: 14px;">🎓 GM Volunteer Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Log Saturday hours datasets and activity boards trackers.</p></div>
+                    <button onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 11px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase;">Login as Volunteer</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 🛠️ 12. SEPARATE ISOLATED ADMINISTRATIVE SUITE ROOM (Hidden Dashboard Screen Overlay Layer) -->
-    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif; text-align: left;">
+    <!-- 🛠️ ADMINISTRATIVE MANAGEMENT SUITE PANEL WINDOW OVERLAY LAYOUT -->
+    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif;">
         <div style="background-color: #0f172a; color: #ffffff; padding: 16px 24px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
-                <span style="width: 10px; height: 10px; background-color: #a855f7; border-radius: 9999px; display: inline-block;"></span>
-                <span style="font-size: 14px; font-weight: 700;">Granth Mitra Public Website Management Panel</span>
-            </div>
-            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; font-family: sans-serif;">Log Out Dashboard</button>
+            <span style="font-size: 14px; font-weight: 700;">Granth Mitra Public Website Management Panel</span>
+            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer;">Log Out Dashboard</button>
         </div>
-
-        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden; box-sizing: border-box; width: 100%;">
-            <!-- Left Options Sidebar -->
-            <aside style="width: 240px; background-color: #020617; padding: 24px; display: flex; flex-direction: column; border-right: 1px solid #1e293b; box-sizing: border-box;">
-                <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 16px;">Website Sections</div>
-                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 700;">
-                    <button onclick="showAdminSection('adminSection-stats')" style="width: 100%; border: none; text-align: left; background: none; color: #c084fc; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📊 1. Symmetrical Statistics</button>
-                    <button onclick="showAdminSection('adminSection-narratives')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📝 2. Mission Context Cards</button>
-                    <button onclick="showAdminSection('adminSection-notices')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📢 3. Notice Announcements</button>
-                    <button onclick="showAdminSection('adminSection-slider')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">🔄 4. Sliding Notes Editor</button>
-                    <button onclick="showAdminSection('adminSection-footer')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">🗺️ 5. Footers & Address Map</button>
-                </div>
+        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden; width: 100%;">
+            <aside style="width: 240px; background-color: #020617; padding: 24px; border-right: 1px solid #1e293b; box-sizing: border-box;">
+                <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 16px;">CMS Modules</div>
+                <button style="width: 100%; text-align: left; background: none; border: none; color: #c084fc; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 8px;">🖼️ Native Asset Uploads</button>
             </aside>
-
-            <!-- Center Management Fields Workspace -->
-            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
-                
-                <!-- SUITE PANEL 1: STATISTICS EDIT SLOTS -->
-                <div id="adminSection-stats" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Manage 8 Symmetrical Counters Grid</h4></div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; box-sizing: border-box;">
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Active Volunteers</label><input id="inputStat-Volunteers" type="text" value="150+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Partner Colleges</label><input id="inputStat-Colleges" type="text" value="35+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Government Schools</label><input id="inputStat-Schools" type="text" value="50+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Public Libraries</label><input id="inputStat-Libraries" type="text" value="35 Active" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Students Mentored</label><input id="inputStat-Pupils" type="text" value="10,000+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Districts Covered</label><input id="inputStat-Districts" type="text" value="12" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Volunteer Hours</label><input id="inputStat-Hours" type="text" value="25,000+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Learning Sessions</label><input id="inputStat-Sessions" type="text" value="1,800+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                    </div>
-                </div>
-
-                <!-- SUITE PANEL 2: MISSION CONTEXT TEXT FIELDS -->
-                <div id="adminSection-narratives" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Rewrite Mission Parameter Narrative Cards</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Why Started Context Body Text</label><textarea id="inputTxt-About" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 72px; font-family: sans-serif; font-size: 13px;">Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.</textarea></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Core Objective Body Text</label><textarea id="inputTxt-Objective" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 72px; font-family: sans-serif; font-size: 13px;">Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.</textarea></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Institutional Footer Signature Stamp</label><input id="inputTxt-Signoff" type="text" value="Akanksha Charitable Trust (ACT)" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
-                    </div>
-                </div>
-
-                <!-- SUITE PANEL 3: 3-EVENT NOTICE BOARD FIELDS -->
-                <div id="adminSection-notices" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Edit Symmetric 3-Event Broadcast Feed Logs</h4></div>
+            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box; text-align: left;">
+                <div style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 20px;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Device Asset Manager: Upload Corporate Graphic Elements Natively</h4></div>
+                    
                     <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
-                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 1</div>
-                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date1" type="text" value="AUGUST 12, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head1" type="text" value="Volunteer Orientation Framework" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
-                            <input id="inputNote-Desc1" type="text" value="Mandatory cluster orientation details review at ACT Head office point." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
+                        <!-- Logo Native Device File Input Uploader -->
+                        <div style="display: flex; flex-direction: column; gap: 6px;">
+                            <label style="font-size: 11px; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 0.5px;">1. Select Official Organization Brand Logo File From Device</label>
+                        <div style="display: flex; flex-direction: column; gap: 6px;">
+                            <label style="font-size: 11px; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 0.5px;">1. Select Official Organization Brand Logo File From Device</label>
+                            <input type="file" id="uploader-brandLogo" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%;" />
                         </div>
-                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
-                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 2</div>
-                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date2" type="text" value="AUGUST 19, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head2" type="text" value="Saturday Session Kit Distribution" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
-                            <input id="inputNote-Desc2" type="text" value="Collection of science experiment manual guides and math activity charts." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
-                        </div>
-                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
-                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 3</div>
-                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date3" type="text" value="AUGUST 26, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head3" type="text" value="Mid-Term Regional Cluster Audit" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
-                            <input id="inputNote-Desc3" type="text" value="Reviewing library logging sheets and text comprehension score metrics." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
+                        
+                        <!-- Mascot Native Device File Input Uploader -->
+                        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;">
+                            <label style="font-size: 11px; font-weight: 700; color: #7c3aed; text-transform: uppercase; letter-spacing: 0.5px;">2. Select Custom Weekly Loop Central Artwork File From Device</label>
+                            <input type="file" id="uploader-mascotImage" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%;" />
                         </div>
                     </div>
-                </div>
 
-                <!-- SUITE PANEL 4: STAKEHOLDER SLIDING NOTES MANAGEMENT FRAME -->
-                <div id="adminSection-slider" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Add, Remove & Swap Community Sliding Notes Array</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">New Profile Name (Bold)</label><input id="inputSlide-Name" type="text" placeholder="e.g. Prof. Ramesh Nair" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Profile Role (Italic)</label><input id="inputSlide-Role" type="text" placeholder="e.g. collegiate mentor leader / alumni / parent" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Testimonial Feedback Quote Statement String</label><textarea id="inputSlide-Quote" placeholder="Enter custom quote context here..." style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 50px; font-family: sans-serif; font-size: 13px;"></textarea></div>
-                        <div style="display: flex; gap: 8px; margin-top: 4px;">
-                            <button onclick="addCustomSlideCard()" style="background-color: #16a34a; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">➕ Add Card Entry to Array</button>
-                            <button onclick="clearSlideCardMemory()" style="background-color: #dc2626; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">✕ Wipe Array Memory back to Default</button>
-                        </div>
+                    <div style="display: flex; justify-content: flex-end; margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 16px;">
+                        <button onclick="commitDashboardChanges()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);">Publish Device Assets Live</button>
                     </div>
-                </div>
-
-                <!-- SUITE PANEL 5: FOOTER CONTACT & MAP ADDRESS ENGINE -->
-                <div id="adminSection-footer" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Footer Contact Streams & Live Address Google Map Linker</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Custom Image Logo Path Filename Target</label><input id="inputFoot-Logo" type="text" value="logo.png" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-family: monospace;" /></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Help Desk Support Strings</label><textarea id="inputFoot-Contact" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 50px; font-family: sans-serif; font-size: 13px;">Desk Help: +91 00000 00000&#10;Email: Geck.granthmitra.team@gmail.com</textarea></div>
-                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Headquarters Physical Mapping Address Text</label><textarea id="inputFoot-Address" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 50px; font-family: sans-serif; font-size: 13px;">Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076</textarea></div>
-                    </div>
-                </div>
-
-                <!-- GLOBAL SAVE MASTER PUSH SYSTEM ACTION TRIGGER -->
-                <div style="display: flex; justify-content: flex-end; padding-top: 12px; margin-top: auto;">
-                    <button onclick="commitDashboardChanges()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);">
-                        Publish Live Content Updates
-                    </button>
                 </div>
             </main>
         </div>
     </div>
 
-    <!-- ⚙️ 13. MASTER COMPONENT INTERACTION LOGIC CONTROL FUNCTIONS ENGINE -->
+    <!-- SCRIPT RUNTIME LAYER -->
     <script>
-        function toggleAuthPopup(show) {
-            const popup = document.getElementById('authPopup');
-            if (popup) popup.style.display = show ? 'flex' : 'none';
-        }
-
-        function executeVolunteerRedirect() {
-            toggleAuthPopup(false);
-            alert("➔ Redirecting Session: Safely exiting the public-facing application workspace to authenticate your individual credentials on the separate Google Apps Script `/volunteer-dashboard` framework web app.");
-            window.open("https://google.com", "_blank");
-        }
-
+        function toggleAuthPopup(show) { document.getElementById('authPopup').style.display = show ? 'flex' : 'none'; }
+        function executeVolunteerRedirect() { toggleAuthPopup(false); window.open("https://google.com", "_blank"); }
+        
         function executeAdminNodeLogin() {
             const passkey = prompt("🔒 Enter ACT Admin Dashboard Security Passkey:");
-            if (!passkey) return;
-            
             if (passkey === "actAdmin2026") {
                 toggleAuthPopup(false);
                 document.getElementById('privateAdminDashboard').style.display = 'flex';
-                stopAutoSlide();
-            } else {
-                alert("❌ Access Authorization Denied: Invalid security credentials pass token.");
+            } else if (passkey) {
+                alert("❌ Access Denied!");
             }
         }
+        
+        function closeAdminDashboard() { document.getElementById('privateAdminDashboard').style.display = 'none'; }
 
-        function closeAdminDashboard() {
-            document.getElementById('privateAdminDashboard').style.display = 'none';
-            startAutoSlide();
-        }
-
-        function showAdminSection(sectionId) {
-            document.getElementById('adminSection-stats').style.display = 'none';
-            document.getElementById('adminSection-narratives').style.display = 'none';
-            document.getElementById('adminSection-notices').style.display = 'none';
-            document.getElementById('adminSection-slider').style.display = 'none';
-            document.getElementById('adminSection-footer').style.display = 'none';
+        // Local Storage Base64 Asset Buffer Fetch Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            const cachedLogo = localStorage.getItem('actUploadedLogoB64');
+            const cachedMascot = localStorage.getItem('actUploadedMascotB64');
             
-            document.getElementById(sectionId).style.display = 'flex';
-        }
-
-        function addCustomSlideCard() {
-            const newName = document.getElementById('inputSlide-Name').value;
-            const newRole = document.getElementById('inputSlide-Role').value;
-            const newQuote = document.getElementById('inputSlide-Quote').value;
-
-            if(!newName || !newQuote) {
-                alert("⚠️ Profile Name and Statement Quote strings cannot remain empty vectors.");
-                return;
-            }
-            
-            runningSliderData.push({ quote: '"' + newQuote + '"', name: newName, role: newRole || "Stakeholder Supporter" });
-            localStorage.setItem('actSliderMemory', JSON.stringify(runningSliderData));
-            
-            document.getElementById('inputSlide-Name').value = '';
-            document.getElementById('inputSlide-Role').value = '';
-            document.getElementById('inputSlide-Quote').value = '';
-            
-            currentSlideIdx = runningSliderData.length - 1;
-            alert("➕ Success: New stakeholder slide card written successfully to memory storage logs array.");
-        }
-
-        function clearSlideCardMemory() {
-            if(confirm("⚠️ Are you sure you want to restore the slider array back to standard default layouts? All custom written profiles will be deleted from memory.")) {
-                localStorage.removeItem('actSliderMemory');
-                runningSliderData = [...defaultSliderData];
-                localStorage.setItem('actSliderMemory', JSON.stringify(defaultSliderData));
-                currentSlideIdx = 0;
-                renderSlide(currentSlideIdx);
-                alert("🗑️ Persistence Cleared: Slide arrays successfully restored back to base NGO templates.");
-            }
-        }
+            if(cachedLogo) document.getElementById('display-brandLogoNav').src = cachedLogo;
+            if(cachedMascot) document.getElementById('display-mascotLoopImage').src = cachedMascot;
+        });
 
         function commitDashboardChanges() {
-            if(document.getElementById('statVolunteers')) document.getElementById('statVolunteers').innerText = document.getElementById('inputStat-Volunteers').value;
-            if(document.getElementById('statColleges')) document.getElementById('statColleges').innerText = document.getElementById('inputStat-Colleges').value;
-            if(document.getElementById('statSchools')) document.getElementById('statSchools').innerText = document.getElementById('inputStat-Schools').value;
-            if(document.getElementById('statLibraries')) document.getElementById('statLibraries').innerText = document.getElementById('inputStat-Libraries').value;
-            if(document.getElementById('statPupils')) document.getElementById('statPupils').innerText = document.getElementById('inputStat-Pupils').value;
-            if(document.getElementById('statDistricts')) document.getElementById('statDistricts').innerText = document.getElementById('inputStat-Districts').value;
-            if(document.getElementById('statHours')) document.getElementById('statHours').innerText = document.getElementById('inputStat-Hours').value;
-            if(document.getElementById('statSessions')) document.getElementById('statSessions').innerText = document.getElementById('inputStat-Sessions').value;
-
-            if(document.getElementById('display-aboutText')) document.getElementById('display-aboutText').innerText = document.getElementById('inputTxt-About').value;
-            if(document.getElementById('display-objectiveText')) document.getElementById('display-objectiveText').innerText = document.getElementById('inputTxt-Objective').value;
-            if(document.getElementById('display-trustSignoff')) document.getElementById('display-trustSignoff').innerText = document.getElementById('inputTxt-Signoff').value;
-
-            if(document.getElementById('display-eventDate1')) document.getElementById('display-eventDate1').innerText = document.getElementById('inputNote-Date1').value;
-            if(document.getElementById('display-eventHeader1')) document.getElementById('display-eventHeader1').innerText = document.getElementById('inputNote-Head1').value;
-            if(document.getElementById('display-eventDesc1')) document.getElementById('display-eventDesc1').innerText = document.getElementById('inputNote-Desc1').value;
+            const logoFileNode = document.getElementById('uploader-brandLogo').files;
+            const mascotFileNode = document.getElementById('uploader-mascotImage').files;
             
-            if(document.getElementById('display-eventDate2')) document.getElementById('display-eventDate2').innerText = document.getElementById('inputNote-Date2').value;
-            if(document.getElementById('display-eventHeader2')) document.getElementById('display-eventHeader2').innerText = document.getElementById('inputNote-Head2').value;
-            if(document.getElementById('display-eventDesc2')) document.getElementById('display-eventDesc2').innerText = document.getElementById('inputNote-Desc2').value;
+            let filesToProcess = 0;
+            let filesProcessed = 0;
 
-            if(document.getElementById('display-eventDate3')) document.getElementById('display-eventDate3').innerText = document.getElementById('inputNote-Date3').value;
-            if(document.getElementById('display-eventHeader3')) document.getElementById('display-eventHeader3').innerText = document.getElementById('inputNote-Head3').value;
-            if(document.getElementById('display-eventDesc3')) document.getElementById('display-eventDesc3').innerText = document.getElementById('inputNote-Desc3').value;
+            if (logoFileNode && logoFileNode.length > 0) filesToProcess++;
+            if (mascotFileNode && mascotFileNode.length > 0) filesToProcess++;
 
-            const newLogoFilename = document.getElementById('inputFoot-Logo').value;
-            if(document.getElementById('display-brandLogoNav')) document.getElementById('display-brandLogoNav').src = newLogoFilename;
-            if(document.getElementById('display-brandLogoFooter')) document.getElementById('display-brandLogoFooter').src = newLogoFilename;
-            
-            if(document.getElementById('display-footerContact')) document.getElementById('display-footerContact').innerHTML = document.getElementById('inputFoot-Contact').value.replace(/\n/g, '<br>');
-            
-            const rawAddressValue = document.getElementById('inputFoot-Address').value;
-            if(document.getElementById('display-footerAddress')) {
-                document.getElementById('display-footerAddress').innerText = rawAddressValue;
-                const encodedAddress = encodeURIComponent(rawAddressValue);
-                const customMapEmbedSrc = "https://google.com" + encodedAddress + "&t=&z=14&ie=UTF8&iwloc=&output=embed";
-                document.getElementById('display-mapIframeWrapper').innerHTML = '<iframe id="display-googleMapEmbed" src="' + customMapEmbedSrc + '" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>';
+            if (filesToProcess === 0) {
+                closeAdminDashboard();
+                return;
             }
 
-            closeAdminDashboard();
-            alert("💾 System Content Published: Every single component track metric card, text block, sliding log, and address map frame updated live successfully.");
+            // HTML5 Local FileReader Base64 Buffer Handlers
+            if (logoFileNode && logoFileNode.length > 0) {
+                const logoReader = new FileReader();
+                logoReader.onload = function(e) {
+                    const logoB64String = e.target.result;
+                    localStorage.setItem('actUploadedLogoB64', logoB64String);
+                    document.getElementById('display-brandLogoNav').src = logoB64String;
+                    checkCompletion();
+                };
+                logoReader.readAsDataURL(logoFileNode[0]);
+            }
+
+            if (mascotFileNode && mascotFileNode.length > 0) {
+                const mascotReader = new FileReader();
+                mascotReader.onload = function(e) {
+                    const mascotB64String = e.target.result;
+                    localStorage.setItem('actUploadedMascotB64', mascotB64String);
+                    document.getElementById('display-mascotLoopImage').src = mascotB64String;
+                    checkCompletion();
+                };
+                mascotReader.readAsDataURL(mascotFileNode[0]);
+            }
+
+            function checkCompletion() {
+                filesProcessed++;
+                if (filesProcessed === filesToProcess) {
+                    closeAdminDashboard();
+                    alert("💾 Success: Device graphical assets compiled and written live smoothly!");
+                }
+            }
         }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const baseAddress = document.getElementById('display-footerAddress').innerText.trim();
-            const encodedBaseAddress = encodeURIComponent(baseAddress);
-            const initialMapSrc = "https://google.com" + encodedBaseAddress + "&t=&z=14&ie=UTF8&iwloc=&output=embed";
-            document.getElementById('display-mapIframeWrapper').innerHTML = '<iframe id="display-googleMapEmbed" src="' + initialMapSrc + '" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>';
-        });
     </script>
-
 </body>
 </html>
