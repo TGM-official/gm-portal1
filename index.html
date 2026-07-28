@@ -10,51 +10,36 @@
     <!-- DUAL-BRANDED HEADER NAVIGATION BAR -->
     <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 40;">
         <div style="max-w: 1200px; margin: 0 auto; padding: 0 24px; height: 96px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-            
-            
             <div style="display: flex; flex-direction: row; align-items: center; gap: 12px;">
-                
-                <!-- 🎯 YOUR LOGO CONTAINER IMAGE SLOT -->
-                <!-- Place your image filename (e.g., logo.png) inside the src="..." below. -->
-                <!-- Right now, it defaults to a stylized purple placeholder box if empty. -->
                 <div style="width: 48px; height: 44px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);">
                     <img src="logo.png" alt="ACT" style="width: 100%; height: 100%; object-fit: contain; font-size: 10px; color: #ffffff; text-align: center; line-height: 44px;" onerror="this.style.display='none'; this.parentNode.innerHTML='📚';"/>
                 </div>
-
                 <div style="display: flex; flex-direction: column;">
                     <span style="font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">GRANTH MITRA | ಗ್ರಂಥಮಿತ್ರ</span>
                     <span style="font-size: 9px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;">Initiative of Akanksha Charitable Trust</span>
                 </div>
             </div>
-
-            <!-- Far Right Portal Login Button Trigger -->
             <div>
                 <button style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 12px 24px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); cursor: pointer;">
                     Portal Login
                 </button>
             </div>
-
         </div>
     </header>
 
-    <!-- 🎯 NEW HERO HUB SECTION BANNER -->
+    <!-- HERO HUB SECTION BANNER -->
     <section style="background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #ffffff; padding: 80px 24px; overflow: hidden; text-align: left;">
         <div style="max-w: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;">
-            
-            <!-- Left Narrative Context Block -->
             <div style="display: flex; flex-direction: column; gap: 24px;">
-                <div style="align-self: flex-start; background-color: rgba(99, 102, 241, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); padding: 6px 16px; rounded: 9999px; border-radius: 9999px; color: #818cf8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                <div style="align-self: flex-start; background-color: rgba(99, 102, 241, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); padding: 6px 16px; border-radius: 9999px; color: #818cf8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
                     ✨ Akanksha Charitable Trust Flagship Initiative
                 </div>
-                
-                <h1 style="font-size: 40px; font-weight: 800; tracking-tight: -0.5px; leading-tight: 1.2; margin: 0; color: #ffffff; line-height: 1.15;">
-                    Empowering Rural Education<br style="display: none; md:block;"/> Through Youth Mentorship
+                <h1 style="font-size: 40px; font-weight: 800; margin: 0; color: #ffffff; line-height: 1.15;">
+                    Empowering Rural Education<br/> Through Youth Mentorship
                 </h1>
-                
                 <p style="font-size: 15px; color: #cbd5e1; line-height: 1.6; margin: 0; max-w: 600px;">
                     Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust where college students dedicate their time to mentoring rural government school students through weekly learning sessions, reading activities, life skills, and community engagement to build a stronger society.
                 </p>
-                
                 <div style="display: flex; flex-direction: row; gap: 16px; margin-top: 8px; flex-wrap: wrap;">
                     <button style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 16px 32px; border: none; border-radius: 12px; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); cursor: pointer;">
                         Become a Volunteer
@@ -64,8 +49,121 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 📊 DYNAMIC PERFORMANCE COUNTERS ROW (Impact Section) -->
+    <section style="max-w: 1200px; margin: -40px auto 0 auto; padding: 0 24px; position: relative; z-index: 20;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+            
+            <!-- Card 1: Active Volunteers -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #f0fdf4; color: #16a34a; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">👥</div>
+                <div>
+                    <div id="statVolunteers" style="font-size: 22px; font-weight: 800; color: #0f172a;">150+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Active Volunteers</div>
+                </div>
+            </div>
+
+            <!-- Card 2: Partner Colleges -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #f3f4f6; color: #4b5563; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🏢</div>
+                <div>
+                    <div id="statColleges" style="font-size: 22px; font-weight: 800; color: #0f172a;">35+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Partner Colleges</div>
+                </div>
+            </div>
+
+            <!-- Card 3: Government Schools -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #eff6ff; color: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🏫</div>
+                <div>
+                    <div id="statSchools" style="font-size: 22px; font-weight: 800; color: #0f172a;">50+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Government Schools</div>
+                </div>
+            </div>
+
+            <!-- Card 4: Public Libraries -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #fdf2f8; color: #db2777; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">📚</div>
+                <div>
+                    <div id="statLibraries" style="font-size: 22px; font-weight: 800; color: #0f172a;">35 Active</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Public Libraries</div>
+                </div>
+            </div>
+
+            <!-- Card 5: Students Mentored -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #fef3c7; color: #d97706; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">👶</div>
+                <div>
+                    <div id="statPupils" style="font-size: 22px; font-weight: 800; color: #0f172a;">10,000+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Students Mentored</div>
+                </div>
+            </div>
+
+            <!-- Card 6: Districts Covered -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #f0fdfa; color: #0d9488; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🗺️</div>
+                <div>
+                    <div id="statDistricts" style="font-size: 22px; font-weight: 800; color: #0f172a;">12</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Districts Covered</div>
+                </div>
+            </div>
+
+            <!-- Card 7: Volunteer Hours -->
+            <!-- Card 7: Volunteer Hours -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #faf5ff; color: #7c3aed; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">⏱️</div>
+                <div>
+                    <div id="statHours" style="font-size: 22px; font-weight: 800; color: #0f172a;">25,000+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Volunteer Hours</div>
+                </div>
+            </div>
+
+            <!-- Card 8: Learning Sessions -->
+            <div style="background-color: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #fff7ed; color: #ea580c; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">👨‍🏫</div>
+                <div>
+                    <div id="statSessions" style="font-size: 22px; font-weight: 800; color: #0f172a;">1,800+</div>
+                    <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">Learning Sessions</div>
+                </div>
+            </div>
 
         </div>
+    </section>
+
+    <!-- 📖 5. ABOUT GRANTH MITRA MISSION CONTEXT SECTION -->
+    <section style="max-w: 1200px; margin: 64px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: center;">
+        
+        <!-- Left Text Column -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <span style="align-self: flex-start; background-color: #eff6ff; padding: 4px 12px; border-radius: 6px; color: #2563eb; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Mission Parameters</span>
+            <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin: 0; line-height: 1.2;">Why the Programme was Started</h2>
+            <p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0;">
+                Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px; font-weight: 600; color: #334155; margin-top: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">🔹 Weekly Saturday Mentoring</div>
+                <div style="display: flex; align-items: center; gap: 8px;">🔹 Public Library Activation</div>
+                <div style="display: flex; align-items: center; gap: 8px;">🔹 Learning Beyond Textbooks</div>
+                <div style="display: flex; align-items: center; gap: 8px;">🔹 Building Confident Citizens</div>
+            </div>
+        </div>
+
+        <!-- Right Side Object Block -->
+        <div style="background-color: #ffffff; padding: 32px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.02); position: relative; overflow: hidden;">
+            <div style="position: absolute; right: -40px; bottom: -40px; width: 160px; height: 160px; background-color: #f3e8ff; border-radius: 9999px; opacity: 0.5; z-index: 1;"></div>
+            <div style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0;">Core Programme Objective</h3>
+                <p style="font-size: 13px; color: #64748b; line-height: 1.6; margin: 0;">
+                    Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.
+                </p>
+                <div style="background-color: #1e1b4b; color: #ffffff; padding: 16px; border-radius: 12px; font-size: 12px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 8px;">
+                    <span>Governance Board: <strong>Akanksha Trust (ACT)</strong></span>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 </body>
