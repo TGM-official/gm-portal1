@@ -470,6 +470,266 @@
             Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.
         </div>
     </footer>
+        <!-- 🏢 11. PORTAL GATEWAY ROUTING MODAL POPUP -->
+    <div id="authPopup" style="position: fixed; inset: 0; background-color: rgba(2, 6, 23, 0.85); backdrop-filter: blur(4px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+        <div style="background-color: #ffffff; max-w: 600px; w: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; font-family: sans-serif; text-align: center;">
+            <button onclick="toggleAuthPopup(false)" style="position: absolute; top: 16px; right: 16px; background-color: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 9999px; cursor: pointer; font-weight: bold; color: #64748b;">✕</button>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+                <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0;">Select Designated Gateway Node</h3>
+                <p style="font-size: 12px; color: #64748b; margin: 0;">Access administration editing suites or individual volunteer data sheets</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; text-align: left;">
+                <!-- ACT Admin Card -->
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; box-sizing: border-box;">
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div style="color: #7c3aed; font-weight: 800; font-size: 14px;">🏢 ACT Admin Login</div>
+                        <p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 0;">Manage statistics records, news updates, slide lists, resources, and contact data maps.</p>
+                    </div>
+                    <button onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">Login as ACT Admin</button>
+                </div>
+                <!-- Volunteer Card -->
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; box-sizing: border-box;">
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div style="color: #4f46e5; font-weight: 800; font-size: 14px;">🎓 GM Volunteer Login</div>
+                        <p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 0;">Log attendance indicators, track university credit balances, and map task files.</p>
+                    </div>
+                    <button onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">Login as Volunteer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🛠️ 12. SEPARATE ISOLATED ADMINISTRATIVE SUITE ROOM (Hidden Dashboard Screen Overlay Layer) -->
+    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif; text-align: left;">
+        <div style="background-color: #0f172a; color: #ffffff; padding: 16px 24px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <span style="width: 10px; height: 10px; background-color: #a855f7; border-radius: 9999px; display: inline-block;"></span>
+                <span style="font-size: 14px; font-weight: 700;">Granth Mitra Public Website Management Panel</span>
+            </div>
+            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; font-family: sans-serif;">Log Out Dashboard</button>
+        </div>
+
+        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden; box-sizing: border-box; width: 100%;">
+            <!-- Left Options Sidebar -->
+            <aside style="width: 240px; background-color: #020617; padding: 24px; display: flex; flex-direction: column; border-right: 1px solid #1e293b; box-sizing: border-box;">
+                <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 16px;">Website Sections</div>
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 700;">
+                    <button onclick="showAdminSection('adminSection-stats')" style="width: 100%; border: none; text-align: left; background: none; color: #c084fc; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📊 1. Symmetrical Statistics</button>
+                    <button onclick="showAdminSection('adminSection-narratives')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📝 2. Mission Context Cards</button>
+                    <button onclick="showAdminSection('adminSection-notices')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">📢 3. Notice Announcements</button>
+                    <button onclick="showAdminSection('adminSection-slider')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">🔄 4. Sliding Notes Editor</button>
+                    <button onclick="showAdminSection('adminSection-footer')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold;">🗺️ 5. Footers & Address Map</button>
+                </div>
+            </aside>
+
+            <!-- Center Management Fields Workspace -->
+            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
+                
+                <!-- SUITE PANEL 1: STATISTICS EDIT SLOTS -->
+                <div id="adminSection-stats" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Manage 8 Symmetrical Counters Grid</h4></div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; box-sizing: border-box;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Active Volunteers</label><input id="inputStat-Volunteers" type="text" value="150+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Partner Colleges</label><input id="inputStat-Colleges" type="text" value="35+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Government Schools</label><input id="inputStat-Schools" type="text" value="50+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Public Libraries</label><input id="inputStat-Libraries" type="text" value="35 Active" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Students Mentored</label><input id="inputStat-Pupils" type="text" value="10,000+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Districts Covered</label><input id="inputStat-Districts" type="text" value="12" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Volunteer Hours</label><input id="inputStat-Hours" type="text" value="25,000+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Learning Sessions</label><input id="inputStat-Sessions" type="text" value="1,800+" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                    </div>
+                </div>
+
+                <!-- SUITE PANEL 2: MISSION CONTEXT TEXT FIELDS -->
+                <div id="adminSection-narratives" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Rewrite Mission Parameter Narrative Cards</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Why Started Context Body Text</label><textarea id="inputTxt-About" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 72px; font-family: sans-serif; font-size: 13px;">Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Core Objective Body Text</label><textarea id="inputTxt-Objective" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 72px; font-family: sans-serif; font-size: 13px;">Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Institutional Footer Signature Stamp</label><input id="inputTxt-Signoff" type="text" value="Akanksha Charitable Trust (ACT)" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: bold;" /></div>
+                    </div>
+                </div>
+
+                <!-- SUITE PANEL 3: 3-EVENT NOTICE BOARD FIELDS -->
+                <div id="adminSection-notices" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Edit Symmetric 3-Event Broadcast Feed Logs</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 1</div>
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date1" type="text" value="AUGUST 12, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head1" type="text" value="Volunteer Orientation Framework" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc1" type="text" value="Mandatory cluster orientation details review at ACT Head office point." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 2</div>
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date2" type="text" value="AUGUST 19, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head2" type="text" value="Saturday Session Kit Distribution" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc2" type="text" value="Collection of science experiment manual guides and math activity charts." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 12px;">Announcement Slot Item 3</div>
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;"><input id="inputNote-Date3" type="text" value="AUGUST 26, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head3" type="text" value="Mid-Term Regional Cluster Audit" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc3" type="text" value="Reviewing library logging sheets and text comprehension score metrics." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%;" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUITE PANEL 4: STAKEHOLDER SLIDING NOTES MANAGEMENT FRAME -->
+                <div id="adminSection-slider" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Add, Remove & Swap Community Sliding Notes Array</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">New Profile Name (Bold)</label><input id="inputSlide-Name" type="text" placeholder="e.g. Prof. Ramesh Nair" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Profile Role (Italic)</label><input id="inputSlide-Role" type="text" placeholder="e.g. collegiate mentor leader / alumni / parent" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Testimonial Feedback Quote Statement String</label><textarea id="inputSlide-Quote" placeholder="Enter custom quote context here..." style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 50px; font-family: sans-serif; font-size: 13px;"></textarea></div>
+                        <div style="display: flex; gap: 8px; margin-top: 4px;">
+                            <button onclick="addCustomSlideCard()" style="background-color: #16a34a; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">➕ Add Card Entry to Array</button>
+                            <button onclick="clearSlideCardMemory()" style="background-color: #dc2626; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">✕ Wipe Array Memory back to Default</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUITE PANEL 5: FOOTER CONTACT & MAP ADDRESS ENGINE -->
+                <div id="adminSection-footer" class="dashboard-form-card" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite: Footer Contact Streams & Live Address Google Map Linker</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Custom Image Logo Path Filename Target</label><input id="inputFoot-Logo" type="text" value="logo.png" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-family: monospace;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Help Desk Support Strings</label><textarea id="inputFoot-Contact" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 50px; font-family: sans-serif; font-size: 13px;">Desk Help: +91 00000 00000&#10;Email: Geck.granthmitra.team@gmail.com</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Headquarters Physical Mapping Address Text</label><textarea id="inputFoot-Address" style="padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; height: 50px; font-family: sans-serif; font-size: 13px;">Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076</textarea></div>
+                    </div>
+                </div>
+
+                <!-- GLOBAL SAVE MASTER PUSH SYSTEM ACTION TRIGGER -->
+                <div style="display: flex; justify-content: flex-end; padding-top: 12px; margin-top: auto;">
+                    <button onclick="commitDashboardChanges()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);">
+                        Publish Live Content Updates
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ⚙️ 13. MASTER COMPONENT INTERACTION LOGIC CONTROL FUNCTIONS ENGINE -->
+    <script>
+        function toggleAuthPopup(show) {
+            const popup = document.getElementById('authPopup');
+            if (popup) popup.style.display = show ? 'flex' : 'none';
+        }
+
+        function executeVolunteerRedirect() {
+            toggleAuthPopup(false);
+            alert("➔ Redirecting Session: Safely exiting the public-facing application workspace to authenticate your individual credentials on the separate Google Apps Script `/volunteer-dashboard` framework web app.");
+            window.open("https://google.com", "_blank");
+        }
+
+        function executeAdminNodeLogin() {
+            const passkey = prompt("🔒 Enter ACT Admin Dashboard Security Passkey:");
+            if (!passkey) return;
+            
+            if (passkey === "actAdmin2026") {
+                toggleAuthPopup(false);
+                document.getElementById('privateAdminDashboard').style.display = 'flex';
+                stopAutoSlide();
+            } else {
+                alert("❌ Access Authorization Denied: Invalid security credentials pass token.");
+            }
+        }
+
+        function closeAdminDashboard() {
+            document.getElementById('privateAdminDashboard').style.display = 'none';
+            startAutoSlide();
+        }
+
+        function showAdminSection(sectionId) {
+            document.getElementById('adminSection-stats').style.display = 'none';
+            document.getElementById('adminSection-narratives').style.display = 'none';
+            document.getElementById('adminSection-notices').style.display = 'none';
+            document.getElementById('adminSection-slider').style.display = 'none';
+            document.getElementById('adminSection-footer').style.display = 'none';
+            
+            document.getElementById(sectionId).style.display = 'flex';
+        }
+
+        function addCustomSlideCard() {
+            const newName = document.getElementById('inputSlide-Name').value;
+            const newRole = document.getElementById('inputSlide-Role').value;
+            const newQuote = document.getElementById('inputSlide-Quote').value;
+
+            if(!newName || !newQuote) {
+                alert("⚠️ Profile Name and Statement Quote strings cannot remain empty vectors.");
+                return;
+            }
+            
+            runningSliderData.push({ quote: '"' + newQuote + '"', name: newName, role: newRole || "Stakeholder Supporter" });
+            localStorage.setItem('actSliderMemory', JSON.stringify(runningSliderData));
+            
+            document.getElementById('inputSlide-Name').value = '';
+            document.getElementById('inputSlide-Role').value = '';
+            document.getElementById('inputSlide-Quote').value = '';
+            
+            currentSlideIdx = runningSliderData.length - 1;
+            alert("➕ Success: New stakeholder slide card written successfully to memory storage logs array.");
+        }
+
+        function clearSlideCardMemory() {
+            if(confirm("⚠️ Are you sure you want to restore the slider array back to standard default layouts? All custom written profiles will be deleted from memory.")) {
+                localStorage.removeItem('actSliderMemory');
+                runningSliderData = [...defaultSliderData];
+                localStorage.setItem('actSliderMemory', JSON.stringify(defaultSliderData));
+                currentSlideIdx = 0;
+                renderSlide(currentSlideIdx);
+                alert("🗑️ Persistence Cleared: Slide arrays successfully restored back to base NGO templates.");
+            }
+        }
+
+        function commitDashboardChanges() {
+            if(document.getElementById('statVolunteers')) document.getElementById('statVolunteers').innerText = document.getElementById('inputStat-Volunteers').value;
+            if(document.getElementById('statColleges')) document.getElementById('statColleges').innerText = document.getElementById('inputStat-Colleges').value;
+            if(document.getElementById('statSchools')) document.getElementById('statSchools').innerText = document.getElementById('inputStat-Schools').value;
+            if(document.getElementById('statLibraries')) document.getElementById('statLibraries').innerText = document.getElementById('inputStat-Libraries').value;
+            if(document.getElementById('statPupils')) document.getElementById('statPupils').innerText = document.getElementById('inputStat-Pupils').value;
+            if(document.getElementById('statDistricts')) document.getElementById('statDistricts').innerText = document.getElementById('inputStat-Districts').value;
+            if(document.getElementById('statHours')) document.getElementById('statHours').innerText = document.getElementById('inputStat-Hours').value;
+            if(document.getElementById('statSessions')) document.getElementById('statSessions').innerText = document.getElementById('inputStat-Sessions').value;
+
+            if(document.getElementById('display-aboutText')) document.getElementById('display-aboutText').innerText = document.getElementById('inputTxt-About').value;
+            if(document.getElementById('display-objectiveText')) document.getElementById('display-objectiveText').innerText = document.getElementById('inputTxt-Objective').value;
+            if(document.getElementById('display-trustSignoff')) document.getElementById('display-trustSignoff').innerText = document.getElementById('inputTxt-Signoff').value;
+
+            if(document.getElementById('display-eventDate1')) document.getElementById('display-eventDate1').innerText = document.getElementById('inputNote-Date1').value;
+            if(document.getElementById('display-eventHeader1')) document.getElementById('display-eventHeader1').innerText = document.getElementById('inputNote-Head1').value;
+            if(document.getElementById('display-eventDesc1')) document.getElementById('display-eventDesc1').innerText = document.getElementById('inputNote-Desc1').value;
+            
+            if(document.getElementById('display-eventDate2')) document.getElementById('display-eventDate2').innerText = document.getElementById('inputNote-Date2').value;
+            if(document.getElementById('display-eventHeader2')) document.getElementById('display-eventHeader2').innerText = document.getElementById('inputNote-Head2').value;
+            if(document.getElementById('display-eventDesc2')) document.getElementById('display-eventDesc2').innerText = document.getElementById('inputNote-Desc2').value;
+
+            if(document.getElementById('display-eventDate3')) document.getElementById('display-eventDate3').innerText = document.getElementById('inputNote-Date3').value;
+            if(document.getElementById('display-eventHeader3')) document.getElementById('display-eventHeader3').innerText = document.getElementById('inputNote-Head3').value;
+            if(document.getElementById('display-eventDesc3')) document.getElementById('display-eventDesc3').innerText = document.getElementById('inputNote-Desc3').value;
+
+            const newLogoFilename = document.getElementById('inputFoot-Logo').value;
+            if(document.getElementById('display-brandLogoNav')) document.getElementById('display-brandLogoNav').src = newLogoFilename;
+            if(document.getElementById('display-brandLogoFooter')) document.getElementById('display-brandLogoFooter').src = newLogoFilename;
+            
+            if(document.getElementById('display-footerContact')) document.getElementById('display-footerContact').innerHTML = document.getElementById('inputFoot-Contact').value.replace(/\n/g, '<br>');
+            
+            const rawAddressValue = document.getElementById('inputFoot-Address').value;
+            if(document.getElementById('display-footerAddress')) {
+                document.getElementById('display-footerAddress').innerText = rawAddressValue;
+                const encodedAddress = encodeURIComponent(rawAddressValue);
+                const customMapEmbedSrc = "https://google.com" + encodedAddress + "&t=&z=14&ie=UTF8&iwloc=&output=embed";
+                document.getElementById('display-mapIframeWrapper').innerHTML = '<iframe id="display-googleMapEmbed" src="' + customMapEmbedSrc + '" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>';
+            }
+
+            closeAdminDashboard();
+            alert("💾 System Content Published: Every single component track metric card, text block, sliding log, and address map frame updated live successfully.");
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const baseAddress = document.getElementById('display-footerAddress').innerText.trim();
+            const encodedBaseAddress = encodeURIComponent(baseAddress);
+            const initialMapSrc = "https://google.com" + encodedBaseAddress + "&t=&z=14&ie=UTF8&iwloc=&output=embed";
+            document.getElementById('display-mapIframeWrapper').innerHTML = '<iframe id="display-googleMapEmbed" src="' + initialMapSrc + '" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>';
+        });
+    </script>
 
 </body>
 </html>
