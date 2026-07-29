@@ -553,6 +553,56 @@
 
     </section>
 
+    <!-- 🗺️ 17. INSTITUTIONAL COMPLIANCE FOOTER GRID (With Dynamic Address-Linked Map Window) -->
+    <footer id="footer" style="background-color: #020617; text-align: left; color: #94a3b8; font-size: 12px; padding: 64px 40px 32px 40px; border-top: 1px solid #1e293b; box-sizing: border-box; width: 100%; margin-top: 64px;">
+        <div style="max-w: 1200px; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; box-sizing: border-box; width: 100%;">
+            
+            
+            <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box;">
+                <h4 style="font-weight: 700; font-size: 15px; margin: 0; color: #ffffff;">🏢 Granth Mitra Programme</h4>
+                <p id="display-footerBlurb" style="color: #94a3b8; margin: 0; line-height: 1.6; font-size: 12px;">
+                    Granth Mitra is an educational volunteer initiative of Akanksha Charitable Trust (ACT) dedicated to empowering rural school students through youth mentorship.
+                </p>
+                <!-- DYNAMIC FOOTER BRAND LOGO SLOT (Synced with Admin Dashboard upload) -->
+                <div style="width: 110px; height: 64px; background: rgba(255,255,255,0.02); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid transparent; margin-top: 4px;">
+                    <img id="display-brandLogoFooter" src="logo.png" alt="ACT Logo" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' viewBox=\'0 0 110 64\' fill=\'%23ffffff\'><rect width=\'110\' height=\'64\' fill=\'%23ffffff\'/><text x=\'50%\' y=\'55%\' font-family=\'sans-serif\' font-size=\'11\' font-weight=\'bold\' fill=\'%2394a3b8\' text-anchor=\'middle\'>ACT LOGO</text></svg>';"/>
+                </div>
+            </div>
+
+            <!-- Column 2: Contact Details & Standard Web Regulatory Links Matrix -->
+            <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box;">
+                <h4 style="font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0; color: #ffffff;">Contact Details Desk</h4>
+                <p id="display-footerContact" style="color: #94a3b8; margin: 0; line-height: 1.8; font-size: 12px;">
+                    Desk Help: +91 00000 00000<br>
+                    Email: <a href="mailto:Geck.granthmitra.team@gmail.com" style="color: #6366f1; text-decoration: none;">Geck.granthmitra.team@gmail.com</a>
+                </p>
+                
+                <!-- STANDARD REGULATORY COMPLIANCE LINK MATRIX -->
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px;">
+                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading official Akanksha Trust User Privacy Policy and data protection charters.')" style="color: #a5b4fc; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">📄 User Privacy Policy</a>
+                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading Program Terms of Service, credit log guidelines, and school protocol maps.')" style="color: #94a3b8; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">📄 Terms of Service</a>
+                    <a href="javascript:void(0)" onclick="alert('🔒 Regulatory Context: Loading system Cookie Disclaimer and browser memory encryption parameters.')" style="color: #94a3b8; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">📄 Cookie Disclaimer</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Headquarters Address & Automatic Synced Map Widget Layout -->
+            <div style="flex: 1.4; min-width: 320px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box;">
+                <h4 style="font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0; color: #ffffff;">Headquarters Address & Location</h4>
+                <p id="display-footerAddress" style="color: #94a3b8; margin: 0; line-height: 1.6; font-size: 12px;">
+                    Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076
+                </p>
+                
+                <!-- SYNCHRONIZED FUNCTIONAL GOOGLE MAPS WINDOW CONTAINER -->
+                <div id="display-mapIframeWrapper" style="width: 100%; height: 160px; border-radius: 12px; overflow: hidden; border: none; background-color: #010409; box-sizing: border-box;">
+                    <!-- Maps canvas context dynamically rendered upon window startup loading loops -->
+                </div>
+            </div>
+
+        </div>
+        <div style="max-w: 1200px; margin: 0 auto; padding-top: 32px; border-top: 1px solid #1e293b; text-align: center; font-size: 11px; color: #475569; font-weight: 500;">
+            Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
