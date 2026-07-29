@@ -172,37 +172,185 @@
         </div>
     </div>
 
-    <!-- 🛠️ ADMINISTRATIVE MANAGEMENT SUITE PANEL WINDOW -->
-    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif; text-align: left;">
-        <div style="background-color: #0f172a; color: #ffffff; padding: 16px 24px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <span style="font-size: 14px; font-weight: 700;">Granth Mitra Public Website Management Panel</span>
-            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer;">Log Out Dashboard</button>
+     <!-- 🛠️ 19. PRIVATELY LOCKED ADMINISTRATIVE CONTROL FORMS PANEL (Perfect Multi-Tab Synchronization Grid) -->
+    <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif; text-align: left; box-sizing: border-box; width: 100%;">
+        
+        <!-- Dashboard Top Header Bar Strip -->
+        <div style="background-color: #0f172a; color: #ffffff; padding: 16px 24px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box; flex-shrink: 0;">
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <span style="width: 10px; height: 10px; background-color: #a855f7; border-radius: 9999px; display: inline-block;"></span>
+                <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.5px;">Granth Mitra Public Website Management Control Suite Panel</span>
+            </div>
+            <button onclick="closeAdminDashboard()" style="background-color: #334155; color: #cbd5e1; font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; outline: none; font-family: sans-serif;">Log Out Dashboard</button>
         </div>
-        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden; width: 100%;">
-            <aside style="width: 240px; background-color: #020617; padding: 24px; border-right: 1px solid #1e293b; box-sizing: border-box;">
-                <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 16px;">CMS Modules</div>
-                <button style="width: 100%; text-align: left; background: none; border: none; color: #c084fc; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 8px;">🖼️ Native Asset Uploads</button>
+
+        <!-- Master Split Grid Viewport Workspace -->
+        <div style="display: flex; flex-direction: row; flex: 1; overflow: hidden; width: 100%; box-sizing: border-box;">
+            
+            <!-- Left Side Options Sidebar Menu Frame -->
+            <aside style="width: 250px; background-color: #020617; padding: 24px 16px; display: flex; flex-direction: column; border-right: 1px solid #1e293b; box-sizing: border-box; flex-shrink: 0;">
+                <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 16px; padding-left: 10px;">CMS Sections</div>
+                <div style="display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700;">
+                    <button onclick="showAdminSection('adminSection-assets')" style="width: 100%; border: none; text-align: left; background: none; color: #c084fc; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">🖼️ 1. Asset File Uploads</button>
+                    <button onclick="showAdminSection('adminSection-stats')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">📊 2. Symmetrical Statistics</button>
+                    <button onclick="showAdminSection('adminSection-narratives')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">📝 3. Mission Text Cards</button>
+                    <button onclick="showAdminSection('adminSection-notices')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">📢 4. Announcement Feeds</button>
+                    <button onclick="showAdminSection('adminSection-slider')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">🔄 5. Sliding Notes Arrays</button>
+                    <button onclick="showAdminSection('adminSection-footer')" style="width: 100%; border: none; text-align: left; background: none; color: #94a3b8; padding: 12px 10px; border-radius: 8px; cursor: pointer; font-weight: bold; outline: none; font-family: sans-serif;">🗺️ 6. Footers & Address Map</button>
+                </div>
             </aside>
-            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box;">
-                <div style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 20px;">
-                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Device Asset Manager: Upload Corporate Graphic Elements Natively</h4></div>
-                    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+            <!-- Right Side Interactive Input Forms Workspace Panels -->
+            <main style="flex: 1; padding: 32px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box; background-color: #f1f5f9;">
+                
+                <!-- CMS TAB SUITE 1: DEVICE NATIVE IMAGE FILE UPLOADERS -->
+                <div id="adminSection-assets" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 1: Device Graphical Assets Processing Units</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
                         <div style="display: flex; flex-direction: column; gap: 6px;">
                             <label style="font-size: 11px; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 0.5px;">1. Select Official Organization Brand Logo File From Device</label>
-                            <input type="file" id="uploader-brandLogo" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%;" />
+                            <input type="file" id="uploader-brandLogo" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;" />
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;">
+                        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
                             <label style="font-size: 11px; font-weight: 700; color: #7c3aed; text-transform: uppercase; letter-spacing: 0.5px;">2. Select Custom Weekly Loop Central Artwork File From Device</label>
-                            <input type="file" id="uploader-mascotImage" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%;" />
+                            <input type="file" id="uploader-mascotImage" accept="image/*" style="font-size: 12px; background-color: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;" />
                         </div>
-                    </div>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 16px;">
-                        <button onclick="commitDashboardChanges()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);">Publish Device Assets Live</button>
                     </div>
                 </div>
+
+                <!-- CMS TAB SUITE 2: ALL 8 CORE STATISTICS GRIDS COUNTERS -->
+                <div id="adminSection-stats" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 2: Modify All 8 Public Impact Counter Cards</h4></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; box-sizing: border-box; width: 100%;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Active Volunteers</label><input id="inputStat-Volunteers" type="text" value="179+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Partner Colleges</label><input id="inputStat-Colleges" type="text" value="01+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Government Schools</label><input id="inputStat-Schools" type="text" value="07+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Public Libraries</label><input id="inputStat-Libraries" type="text" value="03 Active" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Students Mentored</label><input id="inputStat-Pupils" type="text" value="570+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Districts Covered</label><input id="inputStat-Districts" type="text" value="2+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Volunteer Hours</label><input id="inputStat-Hours" type="text" value="870+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Learning Sessions</label><input id="inputStat-Sessions" type="text" value="435+" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold;" /></div>
+                    </div>
+                </div>
+
+                <!-- CMS TAB SUITE 3: MISSION PARAMETERS DESCRIPTION FIELDS -->
+                <div id="adminSection-narratives" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 3: Rewrite Core Objectives Text Descriptions</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Why the Programme Was Started Context Block</label><textarea id="inputTxt-About" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 64px; font-family: sans-serif; font-size: 13px; box-sizing: border-box; width: 100%;">Rural government school children frequently lack access to structured comprehension assets, personal career guidance pathways, and advanced personality development setups beyond normal textbook configurations. Granth Mitra fills this operational gap by mobilizing specialized college student bodies to act as direct field role models during weekly Saturday mentoring sessions.</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Core Programme Objective Blurb Text</label><textarea id="inputTxt-Objective" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 64px; font-family: sans-serif; font-size: 13px; box-sizing: border-box; width: 100%;">Granth Mitra systematically channels student leadership directly into underprivileged regional clusters to enhance foundational testing scores, optimize vocabulary literacy tracks, and configure digital skills competencies.</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Institutional Signature Stamp</label><input id="inputTxt-Signoff" type="text" value="Akanksha Charitable Trust (ACT)" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: bold; width: 100%; box-sizing: border-box;" /></div>
+                    </div>
+                </div>
+
+                <!-- CMS TAB SUITE 4: 3-EVENT NOTICE BOARD FIELDS -->
+                <div id="adminSection-notices" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 4: Edit 3-Event Notice Board Streams</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 14px; width: 100%;">
+                        <div style="background-color: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box; width: 100%;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 11px;">Notice Feed Item 01</div>
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 8px;"><input id="inputNote-Date1" type="text" value="AUGUST 12, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head1" type="text" value="Volunteer Orientation Framework" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc1" type="text" value="Mandatory cluster orientation details review at ACT Head office point." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%; box-sizing: border-box;" />
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box; width: 100%;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 11px;">Notice Feed Item 02</div>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;"><input id="inputNote-Date2" type="text" value="AUGUST 19, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head2" type="text" value="Saturday Session Kit Distribution" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc2" type="text" value="Collection of science experiment manual guides and math activity charts." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%; box-sizing: border-box;" />
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box; width: 100%;">
+                            <div style="font-weight: bold; color: #4f46e5; font-size: 11px;">Notice Feed Item 03</div>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;"><input id="inputNote-Date3" type="text" value="AUGUST 26, 2026" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px;" /><input id="inputNote-Head3" type="text" value="Mid-Term Regional Cluster Audit" style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; font-weight: bold;" /></div>
+                            <input id="inputNote-Desc3" type="text" value="Reviewing library logging sheets and text comprehension score metrics." style="padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12px; width: 100%; box-sizing: border-box;" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMS TAB SUITE 5: COMMUNITY SLIDING NOTES ARRAY CONTROLLER -->
+                <div id="adminSection-slider" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 5: Add, Remove & Reset Community Sliding Memory Arrays</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">New Profile Name (Bold Field)</label><input id="inputSlide-Name" type="text" placeholder="e.g. Rohan Kumar" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; width: 100%; box-sizing: border-box;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Profile Sub-Role Designation (Italic Field)</label><input id="inputSlide-Role" type="text" placeholder="e.g. College Volunteer mentor / Parent" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; width: 100%; box-sizing: border-box;" /></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Feedback Summary Quote Statement String</label><textarea id="inputSlide-Quote" placeholder="Enter custom quote text here..." style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 50px; font-family: sans-serif; font-size: 13px; box-sizing: border-box; width: 100%;"></textarea></div>
+                        <div style="display: flex; flex-direction: row; gap: 8px; flex-wrap: wrap; margin-top: 4px;">
+                            <button onclick="addCustomSlideCard()" style="background-color: #16a34a; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer; font-family: sans-serif;">➕ Add Card Entry to Array</button>
+                            <button onclick="clearSlideCardMemory()" style="background-color: #dc2626; color: #ffffff; padding: 10px 18px; border: none; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer; font-family: sans-serif;">✕ Wipe Array Memory back to Default</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMS TAB SUITE 6: FOOTER CHANNELS & REAL-TIME MAP ADDRESS TARGET -->
+                <div id="adminSection-footer" style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; display: none; flex-direction: column; gap: 16px; box-sizing: border-box; width: 100%;">
+                    <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;"><h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">Form Suite 6: Footer Communications Channels & Dynamic Address Target</h4></div>
+                    <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Help Desk Support Strings</label><textarea id="inputFoot-Contact" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 50px; font-family: sans-serif; font-size: 13px; box-sizing: border-box; width: 100%;">Desk Help: +91 00000 00000&#10;Email: Geck.granthmitra.team@gmail.com</textarea></div>
+                        <div style="display: flex; flex-direction: column; gap: 4px;"><label style="font-size: 11px; font-weight: 700; color: #64748b;">Headquarters Physical Mapping Address Text (Auto-Syncs Map Widget)</label><textarea id="inputFoot-Address" style="padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1; height: 50px; font-family: sans-serif; font-size: 13px; box-sizing: border-box; width: 100%;">Akanksha Charitable Trust Head Office, #21, Ground Floor, MCHS Colony, 5th Cross, Bangalore, Karnataka - 560076</textarea></div>
+                    </div>
+                </div>
+
+                <!-- MASTER WORKSPACE GLOBAL SAVE BUTTON -->
+                <div style="display: flex; justify-content: flex-end; padding-top: 16px; border-top: 1px solid #e2e8f0; margin-top: auto; width: 100%; box-sizing: border-box; flex-shrink: 0;">
+                    <button onclick="commitDashboardChangesAllTabs()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25); font-family: sans-serif;">
+                        Publish Live Content Updates
+                    </button>
+                </div>
+
             </main>
         </div>
     </div>
+
+    <!-- ⚙️ EXTRA SYSTEM INTERACTION SCRIPT FOR MULTI-TAB ENGINE CONNECTIVITY -->
+    <script>
+        function showAdminSection(sectionId) {
+            document.getElementById('adminSection-assets').style.display = 'none';
+            document.getElementById('adminSection-stats').style.display = 'none';
+            document.getElementById('adminSection-narratives').style.display = 'none';
+            document.getElementById('adminSection-notices').style.display = 'none';
+            document.getElementById('adminSection-slider').style.display = 'none';
+            document.getElementById('adminSection-footer').style.display = 'none';
+            
+            document.getElementById(sectionId).style.display = 'flex';
+        }
+
+        function commitDashboardChangesAllTabs() {
+            commitDashboardChanges();
+
+            if(document.getElementById('statVolunteers')) document.getElementById('statVolunteers').innerText = document.getElementById('inputStat-Volunteers').value;
+            if(document.getElementById('statColleges')) document.getElementById('statColleges').innerText = document.getElementById('inputStat-Colleges').value;
+            if(document.getElementById('statSchools')) document.getElementById('statSchools').innerText = document.getElementById('inputStat-Schools').value;
+            if(document.getElementById('statLibraries')) document.getElementById('statLibraries').innerText = document.getElementById('inputStat-Libraries').value;
+            if(document.getElementById('statPupils')) document.getElementById('statPupils').innerText = document.getElementById('inputStat-Pupils').value;
+            if(document.getElementById('statDistricts')) document.getElementById('statDistricts').innerText = document.getElementById('inputStat-Districts').value;
+            if(document.getElementById('statHours')) document.getElementById('statHours').innerText = document.getElementById('inputStat-Hours').value;
+            if(document.getElementById('statSessions')) document.getElementById('statSessions').innerText = document.getElementById('inputStat-Sessions').value;
+
+            if(document.getElementById('display-aboutText')) document.getElementById('display-aboutText').innerText = document.getElementById('inputTxt-About').value;
+            if(document.getElementById('display-objectiveText')) document.getElementById('display-objectiveText').innerText = document.getElementById('inputTxt-Objective').value;
+            if(document.getElementById('display-trustSignoff')) document.getElementById('display-trustSignoff').innerText = document.getElementById('inputTxt-Signoff').value;
+
+            if(document.getElementById('display-eventDate1')) document.getElementById('display-eventDate1').innerText = document.getElementById('inputNote-Date1').value;
+            if(document.getElementById('display-eventHeader1')) document.getElementById('display-eventHeader1').innerText = document.getElementById('inputNote-Head1').value;
+            if(document.getElementById('display-eventDesc1')) document.getElementById('display-eventDesc1').innerText = document.getElementById('inputNote-Desc1').value;
+            
+            if(document.getElementById('display-eventDate2')) document.getElementById('display-eventDate2').innerText = document.getElementById('inputNote-Date2').value;
+            if(document.getElementById('display-eventHeader2')) document.getElementById('display-eventHeader2').innerText = document.getElementById('inputNote-Head2').value;
+            if(document.getElementById('display-eventDesc2')) document.getElementById('display-eventDesc2').innerText = document.getElementById('inputNote-Desc2').value;
+
+            if(document.getElementById('display-eventDate3')) document.getElementById('display-eventDate3').innerText = document.getElementById('inputNote-Date3').value;
+            if(document.getElementById('display-eventHeader3')) document.getElementById('display-eventHeader3').innerText = document.getElementById('inputNote-Head3').value;
+            if(document.getElementById('display-eventDesc3')) document.getElementById('display-eventDesc3').innerText = document.getElementById('inputNote-Desc3').value;
+
+            if(document.getElementById('display-footerContact')) document.getElementById('display-footerContact').innerHTML = document.getElementById('inputFoot-Contact').value.replace(/\n/g, '<br>');
+
+            const updatedAddress = document.getElementById('inputFoot-Address').value;
+            if(document.getElementById('display-footerAddress')) {
+                document.getElementById('display-footerAddress').innerText = updatedAddress;
+                if(typeof syncLiveFooterGoogleMap === 'function') {
+                    syncLiveFooterGoogleMap();
+                }
+            }
+        }
+    </script>
 
     <!-- SCRIPT RUNTIME INTERACTION CONTROL ENGINE -->
     <script>
