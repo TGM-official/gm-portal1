@@ -7,18 +7,17 @@
 </head>
 <body style="background-color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; color: #1e293b;">
 
-    <!-- 🏢 DUAL-BRANDED NAVIGATION HEADER (Absolute Far-Left & Far-Right Separation) -->
+    <!-- 🏢 DUAL-BRANDED NAVIGATION HEADER (Absolute Edge-to-Edge Separation) -->
     <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 40; height: 96px; display: flex; align-items: center; width: 100%;">
         <div style="width: 100%; padding: 0 40px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box;">
             
             <!-- Left Side Element Array -->
             <div style="display: flex; flex-direction: row; align-items: center; gap: 16px; text-align: left;">
                 
-                                <!-- 🎯 DYNAMIC ENLARGED WHITE RECTANGLE LOGO IMAGE CONTAINER (Controlled Live From Your Device Uploader) -->
-                <div style="width: 220px; height: 128px; background-color: #ffffff; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; flex-shrink: 0;">
+                <!-- 🎯 ENLARGED LOGO FRAME CONTAINER (Pure White Fill + Transparent Border Outline Suffixes) -->
+                <div style="width: 110px; height: 64px; background-color: #ffffff; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); border: 1px solid transparent; flex-shrink: 0;">
                     <img id="display-brandLogoNav" src="logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain; display: block;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' viewBox=\'0 0 110 64\' fill=\'%23ffffff\'><rect width=\'110\' height=\'64\' fill=\'%23ffffff\'/><text x=\'50%\' y=\'55%\' font-family=\'sans-serif\' font-size=\'11\' font-weight=\'bold\' fill=\'%234f46e5\' text-anchor=\'middle\'>ACT LOGO</text></svg>';"/>
                 </div>
-
 
                 <div style="display: flex; flex-direction: column; justify-content: center;">
                     <span style="font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; line-height: 1.2;">GRANTH MITRA | ಗ್ರಂಥಮಿತ್ರ</span>
@@ -28,7 +27,7 @@
 
             <!-- Far Right Portal Login Capsule Button -->
             <div style="text-align: right; flex-shrink: 0;">
-                <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 14px 32px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); cursor: pointer; min-width: 160px; text-align: center; outline: none;">
+                <button onclick="toggleAuthPopup(true)" style="background: linear-gradient(to right, #4f46e5, #7c3aed); color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 14px 32px; border: none; border-radius: 9999px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); cursor: pointer; min-width: 160px; text-align: center; outline: none; font-family: sans-serif;">
                     PORTAL LOGIN
                 </button>
             </div>
@@ -56,16 +55,16 @@
                 </div>
             </div>
 
-            <!-- Right Side Visual Box containing the true Device Replaceable Artwork Image Frame -->
+            <!-- Right Side Visual Box containing the Transparent Border Artwork Image Frame -->
             <div style="display: flex; justify-content: center; position: relative;">
                 <div style="position: relative; width: 380px; height: 380px; display: flex; align-items: center; justify-content: center;">
                     
                     <div style="position: absolute; width: 100%; height: 100%; border: 3px solid #dc2626; border-radius: 9999px; border-style: dashed; opacity: 0.6; transform: rotate(-10deg);"></div>
                     <div style="position: absolute; width: 92%; height: 92%; border: 2px solid #2563eb; border-radius: 9999px; border-style: dashed; opacity: 0.6; transform: rotate(25deg);"></div>
                     
-                    <!-- 🎯 TRUE FILE-UPLOADER CLASSROOM GRAPHIC FRAME (Controlled Live From Your Device) -->
-                    <div style="width: 280px; height: 260px; background-color: #020617; border-radius: 9999px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.05); overflow: hidden; position: relative; z-index: 10;">
-                        <img id="display-mascotLoopImage" src="mascot.png" alt="Weekly Loop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size: 56px; display: block; text-align:center;\'>🧑‍🏫</span><div style=\'width: 64px; height: 3px; background: linear-gradient(to right, stroke, %234f46e5); border-radius: 9999px; margin: 4px auto;\'></div><span style=\'font-size: 9px; font-weight: 700; color: %2364748b; text-transform: uppercase; letter-spacing: 1px; text-align:center;\'>WEEKLY LEARNING LOOP</span>';"/>
+                    <!-- 🎯 CENTRAL MASCOT IMAGE HOLDER (Now with border lines set to completely transparent) -->
+                    <div style="width: 280px; height: 260px; background-color: #020617; border-radius: 9999px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid transparent; overflow: hidden; position: relative; z-index: 10; box-sizing: border-box;">
+                        <img id="display-mascotLoopImage" src="mascot.png" alt="Weekly Loop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size: 56px; display: block; text-align:center;\'>🧑‍🏫</span><div style=\'width: 64px; height: 3px; background: linear-gradient(to right, #dc2626, #2563eb); border-radius: 9999px; margin: 4px auto;\'></div><span style=\'font-size: 9px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; text-align:center;\'>WEEKLY LEARNING LOOP</span>';"/>
                     </div>
 
                     <div style="position: absolute; top: 15px; right: -15px; background-color: #ffffff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; color: #0f172a; font-size: 11px; font-weight: bold; border: 1px solid #f1f5f9; white-space: nowrap; z-index: 15;">💜 Community Driven</div>
@@ -77,6 +76,7 @@
 
         </div>
     </section>
+
 
     <!-- 📊 DYNAMIC PERFORMANCE COUNTERS ROW (Impact Section - Fixed Symmetrical Grid) -->
     <section id="impact" style="max-w: 1200px; margin: -40px auto 0 auto; padding: 0 24px; position: relative; z-index: 20; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 16px;">
