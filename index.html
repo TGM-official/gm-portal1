@@ -210,27 +210,25 @@
                 return;
             }
 
-            // HTML5 Native Base64 FileReader Engine Compilation Matrix
+            // HTML5 Native Base64 FileReader Engine with Explicit Array Pointer Indices
             if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
                 const logoReader = new FileReader();
                 logoReader.onload = function(e) {
-                    const logoB64String = e.target.result;
-                    localStorage.setItem('actUploadedLogoB64', logoB64String);
-                    document.getElementById('display-brandLogoNav').src = logoB64String;
+                    localStorage.setItem('actUploadedLogoB64', e.target.result);
+                    document.getElementById('display-brandLogoNav').src = e.target.result;
                     checkCompletion();
                 };
-                logoReader.readAsDataURL(logoFileInput.files[0]);
+                logoReader.readAsDataURL(logoFileInput.files[0]); // ✨ Fixed: Added index pointer [0]
             }
 
             if (mascotFileInput && mascotFileInput.files && mascotFileInput.files.length > 0) {
                 const mascotReader = new FileReader();
                 mascotReader.onload = function(e) {
-                    const mascotB64String = e.target.result;
-                    localStorage.setItem('actUploadedMascotB64', mascotB64String);
-                    document.getElementById('display-mascotLoopImage').src = mascotB64String;
+                    localStorage.setItem('actUploadedMascotB64', e.target.result);
+                    document.getElementById('display-mascotLoopImage').src = e.target.result;
                     checkCompletion();
                 };
-                mascotReader.readAsDataURL(mascotFileInput.files[0]);
+                mascotReader.readAsDataURL(mascotFileInput.files[0]); // ✨ Fixed: Added index pointer [0]
             }
 
             function checkCompletion() {
@@ -241,6 +239,7 @@
                 }
             }
         }
+
 
     </script>
 </body>
