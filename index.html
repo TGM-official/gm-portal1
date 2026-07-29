@@ -250,41 +250,46 @@
             if(cachedMascot) document.getElementById('display-mascotLoopImage').src = cachedMascot;
         });
 
-                function commitDashboardChanges() {
+              function commitDashboardChanges() {
             const logoFileInput = document.getElementById('uploader-brandLogo');
             const mascotFileInput = document.getElementById('uploader-mascotImage');
             
             let filesToProcess = 0;
             let filesProcessed = 0;
 
-            // Check if files are selected at index 0 of the selection array stream
-            if (logoFileInput && logoFileInput.files && logoFileInput.files[0]) filesToProcess++;
-            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files[0]) filesToProcess++;
+            // Securely verify if files are explicitly chosen at index 0 of the browser stream
+            if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) filesToProcess++;
+            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files.length > 0) filesToProcess++;
 
             if (filesToProcess === 0) {
                 closeAdminDashboard();
                 return;
             }
 
-            // HTML5 Base64 FileReader Engine linked with explicit index pointers
-            if (logoFileInput && logoFileInput.files && logoFileInput.files[0]) {
+            // HTML5 Base64 FileReader Engine with Strict [0] Array Pointers
+            if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
                 const logoReader = new FileReader();
                 logoReader.onload = function(e) {
                     localStorage.setItem('actUploadedLogoB64', e.target.result);
                     document.getElementById('display-brandLogoNav').src = e.target.result;
+                    
+                    // Force synchronized footer update as well if element is present
+                    const footerLogo = document.getElementById('display-brandLogoFooter');
+                    if (footerLogo) footerLogo.src = e.target.result;
+                    
                     checkCompletion();
                 };
-                logoReader.readAsDataURL(logoFileInput.files[0]); // ✨ Fixed: Added explicit index [0]
+                logoReader.readAsDataURL(logoFileInput.files[0]); // ✨ Fixed: Extracted explicit item [0]
             }
 
-            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files[0]) {
+            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files.length > 0) {
                 const mascotReader = new FileReader();
                 mascotReader.onload = function(e) {
                     localStorage.setItem('actUploadedMascotB64', e.target.result);
                     document.getElementById('display-mascotLoopImage').src = e.target.result;
                     checkCompletion();
                 };
-                mascotReader.readAsDataURL(mascotFileInput.files[0]); // ✨ Fixed: Added explicit index [0]
+                mascotReader.readAsDataURL(mascotFileInput.files[0]); // ✨ Fixed: Extracted explicit item [0]
             }
 
             function checkCompletion() {
