@@ -603,6 +603,90 @@
             Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.
         </div>
     </footer>
+    <!-- ⚙️ 18. RUNTIME LOGIC ENGINE FOR MAP AUTOMATION & AUTO-SLIDING PERPETUAL INTERVALS -->
+    <script>
+        // Production Slider Data Matrices Collection Loop Nodes Array
+        const sliderDataMatrix = [
+            { quote: '"Teaching the children at the local village library every Saturday has been an incredibly fulfilling journey. Watching their comprehension and vocabulary adapt week by week is a proud metric."', name: "Rohan Kumar", role: "College Volunteer mentor" },
+            { quote: '"The structured handbook data assets provided by Akanksha Trust made deploying to our regional centers seamless. This youth leadership curriculum setup transforms careers."', name: "Ananya Hegde", role: "Alumni Coordinator" },
+            { quote: '"Our primary school children look forward to Saturdays with immense energy. Granth Mitra has successfully generated strong support for textbook reading and laboratory cycles."', name: "Dr. M. S. Gowda", role: "Government Village School Headmaster" },
+            { quote: '"Managing the book corner ledger has brought our community closer. Parents are delighted seeing children engage in communication literacy tracks natively."', name: "Savitha Murthy", role: "Village Public Librarian" }
+        ];
+
+        let runningSliderData = JSON.parse(localStorage.getItem('actSliderMemory')) || sliderDataMatrix;
+        if (!localStorage.getItem('actSliderMemory')) {
+            localStorage.setItem('actSliderMemory', JSON.stringify(sliderDataMatrix));
+        }
+
+        let currentSlideIdx = 0;
+        let autoSlideTimer = null;
+
+        function initTestimonialSlider() {
+            const quoteEl = document.getElementById('display-testimonialQuote');
+            if (!quoteEl) return;
+            
+            if (runningSliderData.length === 0) {
+                quoteEl.innerText = '"No testimonial notes currently loaded into active administration arrays."';
+                document.getElementById('display-testimonialName').innerText = "Empty Slate";
+                document.getElementById('display-testimonialRole').innerText = "ACT System Admin Node";
+                return;
+            }
+            renderSlide(currentSlideIdx);
+            startAutoSlide();
+        }
+
+        function renderSlide(idx) {
+            if (runningSliderData[idx]) {
+                document.getElementById('display-testimonialQuote').innerText = runningSliderData[idx].quote;
+                document.getElementById('display-testimonialName').innerText = runningSliderData[idx].name;
+                document.getElementById('display-testimonialRole').innerText = runningSliderData[idx].role;
+            }
+        }
+
+        function rotateTestimonial(direction) {
+            if (runningSliderData.length === 0) return;
+            currentSlideIdx = (currentSlideIdx + direction + runningSliderData.length) % runningSliderData.length;
+            renderSlide(currentSlideIdx);
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideTimer = setInterval(() => {
+                rotateTestimonial(1);
+            }, 5000); // 5-Second Rotational Clock
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideTimer) clearInterval(autoSlideTimer);
+        }
+
+        // Automatic Google Maps Address Text Parser Runtime Linker Hook Engine
+        function syncLiveFooterGoogleMap() {
+            const addressTextNode = document.getElementById('display-footerAddress');
+            const mapWrapperNode = document.getElementById('display-mapIframeWrapper');
+            
+            if (addressTextNode && mapWrapperNode) {
+                const rawAddress = addressTextNode.innerText.trim();
+                const encodedAddressQuery = encodeURIComponent(rawAddress);
+                const completeEmbedUrl = "https://google.com" + encodedAddressQuery + "&t=&z=14&ie=UTF8&iwloc=&output=embed";
+                
+                mapWrapperNode.innerHTML = '<iframe id="display-googleMapEmbed" src="' + completeEmbedUrl + '" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>';
+            }
+        }
+
+        // Initialize execution sequences cleanly on window document paint load
+        window.addEventListener('DOMContentLoaded', () => {
+            initTestimonialSlider();
+            syncLiveFooterGoogleMap();
+            
+            // Sync up header/footer logo image persistent data buffers
+            const savedLogo = localStorage.getItem('actUploadedLogoB64');
+            if (savedLogo) {
+                if (document.getElementById('display-brandLogoNav')) document.getElementById('display-brandLogoNav').src = savedLogo;
+                if (document.getElementById('display-brandLogoFooter')) document.getElementById('display-brandLogoFooter').src = savedLogo;
+            }
+        });
+    </script>
 
 </body>
 </html>
