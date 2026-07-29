@@ -529,23 +529,44 @@
             </div>
         </div>
     </div>
-    <!-- 📄 13. DUAL PORTAL AUTH NODE SELECTOR MODAL GATEWAY POPUP -->
-    <div id="authPopup" style="position: fixed; inset: 0; background-color: rgba(2, 6, 23, 0.85); backdrop-filter: blur(4px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
-        <div style="background-color: #ffffff; max-w: 560px; width: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
-            <button type="button" onclick="toggleAuthPopup(false)" style="position: absolute; top: 16px; right: 16px; background-color: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 9999px; cursor: pointer; font-weight: bold; color: #64748b; outline: none;">✕</button>
-            <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0; text-align: center;">Select Designated Gateway Node</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; box-sizing: border-box; width: 100%;">
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; text-align: left; box-sizing: border-box;">
-                    <div><div style="color: #7c3aed; font-weight: 800; font-size: 14px;">🏢 ACT Admin Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Upload fresh device image files, customize layouts and counters grids.</p></div>
-                    <button type="button" onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 11px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; outline: none;">Login as ACT Admin</button>
+        <!-- 📄 13. DUAL PORTAL AUTH NODE SELECTOR MODAL GATEWAY POPUP (With High Priority Stacking Layers) -->
+    <div id="authPopup" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100vw; height: 100vh; background-color: rgba(2, 6, 23, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 99999 !important; display: none; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box;">
+        <div style="background-color: #ffffff; max-width: 560px; width: 100%; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); position: relative; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; animation: modalFadeIn 0.2s ease-out;">
+            
+            <!-- Absolute Top Right Close Trigger Capsule -->
+            <button type="button" onclick="toggleAuthPopup(false)" style="position: absolute; top: 20px; right: 20px; background-color: #f1f5f9; border: none; width: 36px; height: 36px; border-radius: 9999px; cursor: pointer; font-weight: bold; color: #64748b; font-size: 14px; display: flex; align-items: center; justify-content: center; outline: none; transition: background 0.2s;">✕</button>
+            
+            <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0; text-align: center; font-family: sans-serif;">Select Designated Gateway Node</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; box-sizing: border-box; width: 100%;">
+                <!-- ACT Admin Card Node Box -->
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; text-align: left; box-sizing: border-box;">
+                    <div>
+                        <div style="color: #7c3aed; font-weight: 800; font-size: 15px; font-family: sans-serif;">🏢 ACT Admin Login</div>
+                        <p style="font-size: 12px; color: #64748b; line-height: 1.6; margin: 6px 0 0 0; font-family: sans-serif;">Upload fresh device image files, customize layouts, and change counters grids.</p>
+                    </div>
+                    <button type="button" onclick="executeAdminNodeLogin()" style="width: 100%; background-color: #7c3aed; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 14px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; outline: none; font-family: sans-serif;">Login as ACT Admin</button>
                 </div>
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; text-align: left; box-sizing: border-box;">
-                    <div><div style="color: #4f46e5; font-weight: 800; font-size: 14px;">🎓 GM Volunteer Login</div><p style="font-size: 11px; color: #64748b; line-height: 1.5; margin: 4px 0 0 0;">Log Saturday hours datasets and activity boards trackers.</p></div>
-                    <button type="button" onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 11px; font-weight: 700; border: none; padding: 12px; border-radius: 12px; cursor: pointer; text-transform: uppercase; outline: none;">Login as Volunteer</button>
+                
+                <!-- Volunteer Card Node Box -->
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; text-align: left; box-sizing: border-box;">
+                    <div>
+                        <div style="color: #4f46e5; font-weight: 800; font-size: 15px; font-family: sans-serif;">🎓 GM Volunteer Login</div>
+                        <p style="font-size: 12px; color: #64748b; line-height: 1.6; margin: 6px 0 0 0; font-family: sans-serif;">Log Saturday hours datasets and activity boards trackers.</p>
+                    </div>
+                    <button type="button" onclick="executeVolunteerRedirect()" style="width: 100%; background-color: #4f46e5; color: #ffffff; font-size: 12px; font-weight: 700; border: none; padding: 14px; border-radius: 12px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; outline: none; font-family: sans-serif;">Login as Volunteer</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Embedded Keyframe Animation Style to assist browser paint renders cleanly -->
+    <style>
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 
     <!-- 🛠️ 14. PRIVATE ADMINISTRATIVE MANAGEMENT CONTROL DESK SUITE PANEL OVERLAY -->
     <div id="privateAdminDashboard" style="position: fixed; inset: 0; background-color: #f1f5f9; z-index: 200; display: none; flex-direction: column; font-family: sans-serif; text-align: left; box-sizing: border-box; width: 100%;">
