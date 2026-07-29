@@ -197,22 +197,22 @@
         });
 
         function commitDashboardChanges() {
-            const logoFileNode = document.getElementById('uploader-brandLogo').files;
-            const mascotFileNode = document.getElementById('uploader-mascotImage').files;
+            const logoFileInput = document.getElementById('uploader-brandLogo');
+            const mascotFileInput = document.getElementById('uploader-mascotImage');
             
             let filesToProcess = 0;
             let filesProcessed = 0;
 
-            if (logoFileNode && logoFileNode.length > 0) filesToProcess++;
-            if (mascotFileNode && mascotFileNode.length > 0) filesToProcess++;
+            if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) filesToProcess++;
+            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files.length > 0) filesToProcess++;
 
             if (filesToProcess === 0) {
                 closeAdminDashboard();
                 return;
             }
 
-            // HTML5 Local FileReader Base64 Buffer Handlers
-            if (logoFileNode && logoFileNode.length > 0) {
+            // HTML5 Native Base64 FileReader Engine Compilation Matrix
+            if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
                 const logoReader = new FileReader();
                 logoReader.onload = function(e) {
                     const logoB64String = e.target.result;
@@ -220,10 +220,10 @@
                     document.getElementById('display-brandLogoNav').src = logoB64String;
                     checkCompletion();
                 };
-                logoReader.readAsDataURL(logoFileNode[0]);
+                logoReader.readAsDataURL(logoFileInput.files[0]);
             }
 
-            if (mascotFileNode && mascotFileNode.length > 0) {
+            if (mascotFileInput && mascotFileInput.files && mascotFileInput.files.length > 0) {
                 const mascotReader = new FileReader();
                 mascotReader.onload = function(e) {
                     const mascotB64String = e.target.result;
@@ -231,7 +231,7 @@
                     document.getElementById('display-mascotLoopImage').src = mascotB64String;
                     checkCompletion();
                 };
-                mascotReader.readAsDataURL(mascotFileNode[0]);
+                mascotReader.readAsDataURL(mascotFileInput.files[0]);
             }
 
             function checkCompletion() {
@@ -242,6 +242,7 @@
                 }
             }
         }
+
     </script>
 </body>
 </html>
