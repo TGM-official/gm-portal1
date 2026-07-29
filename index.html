@@ -714,6 +714,7 @@
                     <button type="button" onclick="commitDashboardChangesAllTabs()" style="background: linear-gradient(to right, #7c3aed, #4f46e5); color: #ffffff; font-size: 12px; font-weight: 700; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25); font-family: sans-serif;">
                         Publish Live Content Updates
                     </button>
+                    
                 </div>
             </main>
         </div>
@@ -721,7 +722,18 @@
 
     <!-- ⚙️ MASTER COMPONENT INTERACTION LOGIC CONTROL FUNCTIONS ENGINE -->
     <script>
-        function toggleAuthPopup(show) { document.getElementById('authPopup').style.display = show ? 'flex' : 'none'; }
+        function toggleAuthPopup(show) { 
+            const popupNode = document.getElementById('authPopup');
+            if (popupNode) {
+                // Force a premium display style block over the highest paint canvas track layer
+                popupNode.style.setProperty('display', show ? 'flex' : 'none', 'important');
+                popupNode.style.setProperty('z-index', '999999', 'important');
+                popupNode.style.setProperty('position', 'fixed', 'important');
+                
+                // Securely handle modal body lock states to prevent clashing text scroll issues
+                document.body.style.overflow = show ? 'hidden' : 'auto';
+            }
+        }
         function executeVolunteerRedirect() { toggleAuthPopup(false); window.open("https://google.com", "_blank"); }
         
         function toggleVolunteerForm(show) { document.getElementById('volunteerFormModal').style.display = show ? 'flex' : 'none'; }
