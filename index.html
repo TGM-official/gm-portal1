@@ -466,15 +466,15 @@
             }, 500);
         }, 6000);
 
-        // --- 4. DATA SYNCHRONIZATION (CMS - Fixed File Array Pointer Engine) ---
+                // --- 4. DATA SYNCHRONIZATION CMS (Synchronized Step-by-Step File Queue Engine) ---
         function publishUpdates() {
-            // Update Stats Metrics Fields
+            // A. Update text stats counters instantly
             if(document.getElementById('in-vol') && document.getElementById('in-vol').value) document.getElementById('stat-volunteers').innerText = document.getElementById('in-vol').value;
             if(document.getElementById('in-col') && document.getElementById('in-col').value) document.getElementById('stat-colleges').innerText = document.getElementById('in-col').value;
             if(document.getElementById('in-sch') && document.getElementById('in-sch').value) document.getElementById('stat-schools').innerText = document.getElementById('in-sch').value;
             if(document.getElementById('in-lib') && document.getElementById('in-lib').value) document.getElementById('stat-libraries').innerText = document.getElementById('in-lib').value;
 
-            // Update Address and Map Coordinates Live [dynamic-map]
+            // B. Update physical office address text and Google Maps iframe embed
             const newAddrField = document.getElementById('in-addr');
             if(newAddrField && newAddrField.value) {
                 const cleanAddr = newAddrField.value.trim();
@@ -483,30 +483,60 @@
                 document.getElementById('google-map').src = "https://google.com" + encodedAddrStr + "&t=&z=15&ie=UTF8&iwloc=&output=embed";
             }
 
-            // Securely process chosen files at index 0 of the browser stream
+            // C. Setup synchronized file processing array queue hooks
             const logoFileInput = document.getElementById('up-logo');
             const heroFileInput = document.getElementById('up-hero');
+            
+            let filesToProcess = [];
 
-            if(logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
-                const reader = new FileReader();
-                reader.onload = function(e) { 
-                    localStorage.setItem('actUploadedLogoB64', e.target.result);
-                    document.getElementById('display-brandLogoNav').src = e.target.result; 
-                };
-                reader.readAsDataURL(logoFileInput.files[0]); // ✨ Fixed: Added explicit index item pointer
+            if (logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
+                filesToProcess.push({ input: logoFileInput.files[0], storageKey: 'actUploadedLogoB64', elementId: 'display-brandLogoNav' });
             }
-            if(heroFileInput && heroFileInput.files && heroFileInput.files.length > 0) {
-                const reader = new FileReader();
-                reader.onload = function(e) { 
-                    localStorage.setItem('actUploadedMascotB64', e.target.result);
-                    document.getElementById('display-heroImg').src = e.target.result; 
-                };
-                reader.readAsDataURL(heroFileInput.files[0]); // ✨ Fixed: Added explicit index item pointer
+            if (heroFileInput && heroFileInput.files && heroFileInput.files.length > 0) {
+                filesToProcess.push({ input: heroFileInput.files[0], storageKey: 'actUploadedMascotB64', elementId: 'display-heroImg' });
             }
 
-            document.getElementById('adminPanel').style.display = 'none';
-            alert("💾 System Synchronized: All metric cards, text boxes, and device graphical assets updated successfully!");
+            // If zero image files are chosen, close dashboard instantly with no loop freezes
+            if (filesToProcess.length === 0) {
+                document.getElementById('adminPanel').style.display = 'none';
+                alert("💾 Success: Text metric card configurations updated successfully!");
+                return;
+            }
+
+            // D. Process file conversions sequentially one after another
+            let currentQueueIndex = 0;
+
+            function processNextFileInQueue() {
+                if (currentQueueIndex >= filesToProcess.length) {
+                    // All files processed cleanly! Close dashboard viewport safely
+                    document.getElementById('adminPanel').style.display = 'none';
+                    alert("💾 Success: All text values and high-resolution device photos saved live successfully!");
+                    return;
+                }
+
+                const currentFileTask = filesToProcess[currentQueueIndex];
+                const readerNode = new FileReader();
+
+                readerNode.onload = function(e) {
+                    try {
+                        localStorage.setItem(currentFileTask.storageKey, e.target.result);
+                        document.getElementById(currentFileTask.elementId).src = e.target.result;
+                    } catch (error) {
+                        console.warn("Storage warning: File payload is large for full storage cache.");
+                    }
+                    
+                    // Move to the next item in the queue array track securely
+                    currentQueueIndex++;
+                    processNextFileInQueue();
+                };
+
+                readerNode.readAsDataURL(currentFileTask.input);
+            }
+
+            // Kickstart the serial queue processor
+            processNextFileInQueue();
         }
+
 
     </script>
 </body>
