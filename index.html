@@ -174,6 +174,84 @@
             </div>
         </div>
     </section>
+    <!-- 🎴 4. PROGRAMME AREAS GRID (Hover-Interactive Matrix) -->
+    <section style="padding: 60px 5%; background: #f1f5f9;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px;">Educational Pillars</span>
+                <h2 style="font-size: 32px; font-weight: 800; margin-top: 8px;">Programme Focus Areas</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+                <!-- Area Card 1 -->
+                <div class="area-card" style="background: #fff; border-radius: 24px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; border: 1px solid #e2e8f0; cursor: default;">
+                    <div style="font-size: 36px; margin-bottom: 20px;">📖</div>
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px;">Reading & Library</h3>
+                    <p style="font-size: 14px; color: #64748b; line-height: 1.6;">Setting up book corners and conducting reading sessions to build fundamental comprehension skills.</p>
+                </div>
+                <!-- Area Card 2 -->
+                <div class="area-card" style="background: #fff; border-radius: 24px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; border: 1px solid #e2e8f0;">
+                    <div style="font-size: 36px; margin-bottom: 20px;">🧪</div>
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px;">Science Modules</h3>
+                    <p style="font-size: 14px; color: #64748b; line-height: 1.6;">Hands-on weekend experiment kits that turn textbooks into practical learning experiences.</p>
+                </div>
+                <!-- Area Card 3 -->
+                <div class="area-card" style="background: #fff; border-radius: 24px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; border: 1px solid #e2e8f0;">
+                    <div style="font-size: 36px; margin-bottom: 20px;">📐</div>
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px;">Mathematics Hub</h3>
+                    <p style="font-size: 14px; color: #64748b; line-height: 1.6;">Simplifying complex logic through student-led mentoring and interactive numeric puzzles.</p>
+                </div>
+                <!-- Area Card 4 -->
+                <div class="area-card" style="background: #fff; border-radius: 24px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; border: 1px solid #e2e8f0;">
+                    <div style="font-size: 36px; margin-bottom: 20px;">🗣️</div>
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px;">English Literacy</h3>
+                    <p style="font-size: 14px; color: #64748b; line-height: 1.6;">Build confidence in spoken English and vocabulary through peer-to-peer conversation loops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔄 5. STAKEHOLDER TESTIMONIALS (Auto-Sliding Carousel) -->
+    <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto; text-align: center;">
+        <div style="background: var(--text); border-radius: 40px; padding: 60px 40px; color: #fff; position: relative; overflow: hidden;">
+            <div style="font-size: 40px; margin-bottom: 30px; opacity: 0.3;">"</div>
+            <div id="slide-content" style="min-height: 120px; display: flex; flex-direction: column; justify-content: center; transition: 0.5s;">
+                <p id="display-quote" style="font-size: 20px; line-height: 1.6; margin-bottom: 24px; font-style: italic;">
+                    "Teaching at the local village library every Saturday has been an incredibly fulfilling journey."
+                </p>
+                <div style="font-weight: 800; font-size: 16px; color: #a5b4fc;" id="display-name">Rohan Kumar</div>
+                <div style="font-size: 13px; color: #94a3b8; margin-top: 4px;" id="display-role">College Volunteer Mentor</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ⚙️ SLIDER LOGIC
+        const sliderData = [
+            { quote: '"Teaching at the name: "Rohan Kumar", role: "College Volunteer Mentor" },
+            { quote: '"The structured curriculum provided by Akanksha Trust made deploying to regional centers seamless for our NSS group"', name: "Ananya Hegde", role: "Alumni Coordinator" },
+            { quote: '"Our primary students look forward to Saturdays with immense energy The program builds a bridge between college and rural kids"', name: "Dr M S Gowda", role: "Village School Headmaster" }
+        ];
+
+        let currentIdx = 0;
+        function rotateSlides() {
+            currentIdx = (currentIdx + 1) % sliderData.length;
+            const quoteEl = document.getElementById('display-quote');
+            const nameEl = document.getElementById('display-name');
+            const roleEl = document.getElementById('display-role');
+            
+            // Subtle fade effect
+            document.getElementById('slide-content').style.opacity = 0;
+            setTimeout(() => {
+                quoteEl.innerText = sliderData[currentIdx].quote;
+                nameEl.innerText = sliderData[currentIdx].name;
+                roleEl.innerText = sliderData[currentIdx].role;
+                document.getElementById('slide-content').style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(rotateSlides, 5000); // 5-Second Loop
+    </script>
 
 </body>
 </html>
