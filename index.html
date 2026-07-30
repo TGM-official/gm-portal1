@@ -466,40 +466,48 @@
             }, 500);
         }, 6000);
 
-        // --- 4. DATA SYNCHRONIZATION (CMS) ---
+        // --- 4. DATA SYNCHRONIZATION (CMS - Fixed File Array Pointer Engine) ---
         function publishUpdates() {
-            // Update Stats
-            if(document.getElementById('in-vol').value) document.getElementById('stat-volunteers').innerText = document.getElementById('in-vol').value;
-            if(document.getElementById('in-col').value) document.getElementById('stat-colleges').innerText = document.getElementById('in-col').value;
-            if(document.getElementById('in-sch').value) document.getElementById('stat-schools').innerText = document.getElementById('in-sch').value;
-            if(document.getElementById('in-lib').value) document.getElementById('stat-libraries').innerText = document.getElementById('in-lib').value;
+            // Update Stats Metrics Fields
+            if(document.getElementById('in-vol') && document.getElementById('in-vol').value) document.getElementById('stat-volunteers').innerText = document.getElementById('in-vol').value;
+            if(document.getElementById('in-col') && document.getElementById('in-col').value) document.getElementById('stat-colleges').innerText = document.getElementById('in-col').value;
+            if(document.getElementById('in-sch') && document.getElementById('in-sch').value) document.getElementById('stat-schools').innerText = document.getElementById('in-sch').value;
+            if(document.getElementById('in-lib') && document.getElementById('in-lib').value) document.getElementById('stat-libraries').innerText = document.getElementById('in-lib').value;
 
-            // Update Address and Map
-            const newAddr = document.getElementById('in-addr').value;
-            if(newAddr) {
-                document.getElementById('display-address').innerText = newAddr;
-                const encodedAddr = encodeURIComponent(newAddr);
-                document.getElementById('google-map').src = `https://google.com{encodedAddr}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+            // Update Address and Map Coordinates Live [dynamic-map]
+            const newAddrField = document.getElementById('in-addr');
+            if(newAddrField && newAddrField.value) {
+                const cleanAddr = newAddrField.value.trim();
+                document.getElementById('display-address').innerText = cleanAddr;
+                const encodedAddrStr = encodeURIComponent(cleanAddr);
+                document.getElementById('google-map').src = "https://google.com" + encodedAddrStr + "&t=&z=15&ie=UTF8&iwloc=&output=embed";
             }
 
-            // Process Device Image Uploads
-            const logoFile = document.getElementById('up-logo').files;
-            const heroFile = document.getElementById('up-hero').files;
+            // Securely process chosen files at index 0 of the browser stream
+            const logoFileInput = document.getElementById('up-logo');
+            const heroFileInput = document.getElementById('up-hero');
 
-            if(logoFile) {
+            if(logoFileInput && logoFileInput.files && logoFileInput.files.length > 0) {
                 const reader = new FileReader();
-                reader.onload = (e) => document.getElementById('display-brandLogoNav').src = e.target.result;
-                reader.readAsDataURL(logoFile);
+                reader.onload = function(e) { 
+                    localStorage.setItem('actUploadedLogoB64', e.target.result);
+                    document.getElementById('display-brandLogoNav').src = e.target.result; 
+                };
+                reader.readAsDataURL(logoFileInput.files[0]); // ✨ Fixed: Added explicit index item pointer
             }
-            if(heroFile) {
+            if(heroFileInput && heroFileInput.files && heroFileInput.files.length > 0) {
                 const reader = new FileReader();
-                reader.onload = (e) => document.getElementById('display-heroImg').src = e.target.result;
-                reader.readAsDataURL(heroFile);
+                reader.onload = function(e) { 
+                    localStorage.setItem('actUploadedMascotB64', e.target.result);
+                    document.getElementById('display-heroImg').src = e.target.result; 
+                };
+                reader.readAsDataURL(heroFileInput.files[0]); // ✨ Fixed: Added explicit index item pointer
             }
 
             document.getElementById('adminPanel').style.display = 'none';
-            alert("💾 System Synchronized: All changes are now live on this device!");
+            alert("💾 System Synchronized: All metric cards, text boxes, and device graphical assets updated successfully!");
         }
+
     </script>
 </body>
 </html>
