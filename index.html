@@ -95,10 +95,24 @@
         function closeAllModals(e) {
             if(e.target.id === 'modalOverlay') document.getElementById('modalOverlay').style.display = 'none';
         }
+              // --- 2. ADMIN AUTHENTICATION (Fixed Overlay Layout Toggle) ---
         function adminLogin() {
-            let pass = prompt("Enter Admin Key:");
-            if(pass === "actAdmin2026") alert("Dashboard Unlocked (Feature appending next...)");
+            let pass = prompt("Enter secure ACT Admin Key:");
+            if(pass === "actAdmin2026") {
+                // Hide selection card overlay layout wrapper
+                document.getElementById('modalOverlay').style.setProperty('display', 'none', 'important');
+                
+                // Show the complete multi-tab administrative forms suite panel instantly
+                const adminHubNode = document.getElementById('adminPanel');
+                if (adminHubNode) {
+                    adminHubNode.style.setProperty('display', 'block', 'important');
+                    adminHubNode.style.setProperty('z-index', '999999', 'important');
+                }
+            } else if (pass) { 
+                alert("Access Denied."); 
+            }
         }
+
     </script>
         <!-- 📊 2. IMPACT STATISTICS GRID (Locked 4-Card Desktop Row) -->
     <section style="padding: 0 5%; margin-top: -60px; position: relative; z-index: 10;">
