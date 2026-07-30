@@ -324,6 +324,55 @@
             </div>
         </div>
     </section>
+    <!-- 🗺️ 8. INSTITUTIONAL COMPLIANCE FOOTER & DYNAMIC MAP -->
+    <footer id="footer" style="background: #020617; padding: 80px 5% 40px 5%; color: #94a3b8; font-size: 13px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 60px; margin-bottom: 60px;">
+            
+            
+            <div>
+                <h4 style="color: #fff; font-size: 16px; font-weight: 800; margin-bottom: 20px;">🏢 Granth Mitra Programme</h4>
+                <p style="line-height: 1.8; margin-bottom: 24px;">An educational initiative of Akanksha Charitable Trust (ACT) dedicated to youth mentorship and rural literacy.</p>
+                <div style="width: 110px; height: 60px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <span style="color: #fff; font-weight: 800;">ACT LOGO</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Regulatory & Contact -->
+            <div>
+                <h4 style="color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Contact Desk</h4>
+                <p style="line-height: 1.8; margin-bottom: 20px;">
+                    Desk Help: +91 00000 00000<br>
+                    Email: <a href="mailto:Geck.granthmitra.team@gmail.com" style="color: #6366f1; text-decoration: none;">Geck.granthmitra.team@gmail.com</a>
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="#" style="color: #a5b4fc; text-decoration: none;">📄 User Privacy Policy</a>
+                    <a href="#" style="color: #94a3b8; text-decoration: none;">📄 Terms of Service</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Physical Address & Live Map -->
+            <div>
+                <h4 style="color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Headquarters</h4>
+                <p id="display-address" style="line-height: 1.6; margin-bottom: 20px;">
+                    Akanksha Charitable Trust, #21, Ground Floor, MCHS Colony, 5th Cross, BTM Layout, Bangalore, KA - 560076
+                </p>
+                <!-- DYNAMIC GOOGLE MAP FRAME -->
+                <div id="map-container" style="width: 100%; height: 160px; border-radius: 16px; overflow: hidden; background: #010409;">
+                    <iframe 
+                        id="google-map"
+                        src="https://google.com" 
+                        style="width: 100%; height: 100%; border: 0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div style="max-width: 1200px; margin: 0 auto; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: #475569;">
+            Copyright &copy; 2026 | Akanksha Charitable Trust (ACT) | All Rights Reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
